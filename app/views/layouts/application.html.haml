@@ -83,5 +83,58 @@
         = link_to 'Ver todos los compromisos', nil, class: 'btn'
         .clear
       #liabilities-links
-        = link_to 'Economía', nil, class: 
+        = link_to 'Economía', nil, class: 'economy'
+        = link_to 'Seguridad', nil, class: 'security'
+        = link_to 'Mujeres', nil, class: 'women'
+        = link_to 'Agricultura', nil, class: 'agriculture'
+        = link_to 'Desarrollo', nil, class: 'development'
+        = link_to 'Empleo', nil, class: 'jobs'
+        = link_to 'Educación', nil, class: 'education'
+        .clear
+      #main
+        #news
+          %h2
+            Noticias
+          %div
+            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
+            %h3
+              = link_to 'Salvador recibe proclama y la llave de Watsonville en Estados Unidos', nil
+            = link_to 'Seguir leyendo', nil, class: 'read-more'
+            .clear
+          %div
+            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
+            %h3
+              = link_to 'Salvador Sánchez Cerén: Una nueva relación de independencia y soberanía empieza a hacerse realidad en Latinoamérica', nil
+            = link_to 'Seguir leyendo', nil, class: 'read-more'
+            .clear
+          %div
+            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
+            %h3
+              = link_to 'Salvador recibe proclama y la llave de Watsonville en Estados Unidos', nil
+            = link_to 'Seguir leyendo', nil, class: 'read-more'
+            .clear
+        #media
+          #join-us
+            Únete y apóyanos
+            = link_to 'Ver cómo', nil, class: 'btn'
+          #gallery
+            %h2
+              Galería multimedia
+            = link_to image_tag('gallery-example.jpg'), nil
+        .clear
+      #bottom
+        #social
+          Búscanos en:
+          = link_to image_tag('icon-facebook-medium.jpg'), nil
+          = link_to image_tag('icon-twitter-medium.jpg'), nil
+          = link_to image_tag('icon-linkedin-medium.jpg'), nil
+          = link_to image_tag('icon-rss-medium.jpg'), nil
+          = link_to image_tag('icon-gplus-medium.jpg'), nil
+          = link_to image_tag('icon-youtube-medium.jpg'), nil
+          .clear
+        #what-do-you-want
+          ¿Qué país querés?
+        .clear
+        
+        
       

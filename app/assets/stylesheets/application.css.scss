@@ -320,3 +320,168 @@ b {
     width: 29px;
   }
 }
+
+#liabilities-links {
+  a {
+    background: #c7dde8;
+    background-color: #c7dde8;
+    background-position: center 30px;
+    background-repeat: no-repeat;
+    color: #55798f;
+    float: left;
+    margin-left: 6px;
+    padding: 72px 0 24px 0;
+    text-align: center;
+    width: 132px;
+    
+    &.economy {
+      background-image: image-url('icon-economy.jpg');
+      margin-left: 0;
+    }
+
+    &.security {
+      background-image: image-url('icon-security.jpg');
+    }
+
+    &.women {
+      background-image: image-url('icon-women.jpg');
+    }
+
+    &.agriculture {
+      background-image: image-url('icon-agriculture.jpg');
+    }
+
+    &.jobs {
+      background-image: image-url('icon-jobs.jpg');
+    }
+
+    &.development {
+      background-image: image-url('icon-development.jpg');
+    }
+
+    &.education {
+      background-image: image-url('icon-education.jpg');
+    }
+  }
+}
+
+#main {
+  background: #fff;
+  margin: 8px 0 0 0;
+}
+
+#news {
+  float: left;
+  padding: 26px 24px 10px 24px;
+  width: 454px;
+  
+  h2 {
+    color: #436c82;
+    font-size: 25px;
+    padding: 0 0 20px 0;
+  }
+  
+  div {
+    padding: 5px 0;
+  }
+  
+  .pic {
+    float: left;
+    width: 190px;
+  }
+
+  h3 {
+    float: left;
+    height: 74px;
+    line-height: 18px;
+    margin-left: 12px;
+    overflow: hidden;
+    width: 252px;
+    
+    a {
+      color: #29aae3;
+    }
+  }
+  
+  a {
+    font-size: 17px;
+  
+    &.read-more {
+      color: #f15b26;
+      display: inline-block;
+      margin: 10px 0 0 12px;
+    }
+  }
+}
+
+#media {
+  float: left;
+  position: relative;
+  width: 458px;
+}
+
+#join-us {
+  background: image-url('bg-join-us.jpg') center center no-repeat;
+  color: #fff;
+  font-size: 27px;
+  font-weight: bold;
+  height: 120px;
+  padding: 20px 0 0 170px;
+  position: absolute;
+  right: -18px;
+  text-align: center;
+  top: 34px;
+  width: 305px;
+  
+  a {
+    background: #426b7f;
+    color: #fff;
+    font-size: 21px;
+    margin-top: 10px;
+    padding: 10px 56px;
+  }
+}
+
+#gallery {
+  padding: 186px 12px 0 0;
+  
+  h2 {
+    color: #436c82;
+    font-size: 25px;
+    padding: 0 0 20px 0;
+  }
+}
+
+#social {
+  background: #c7dde8;
+  color: #436c80;
+  float: left;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 11px 30px;
+  width: 442px;
+  
+  a {
+    display: inline-block;
+    margin-left: 12px;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+}
+
+#what-do-you-want {
+  background: #5fb84e;
+  color: #fff;
+  float: left;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 12px 0px;
+  text-align: center;
+  width: 458px;
+}
+
+
