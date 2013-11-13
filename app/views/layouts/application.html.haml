@@ -39,7 +39,7 @@
             %br
             = link_to 'ver quienes son', nil, class: 'text-link'
         .clear
-      #main
+      #posts
         #featured
           = image_tag 'featured-example.jpg'
           .caption
@@ -135,6 +135,39 @@
         #what-do-you-want
           ¿Qué país querés?
         .clear
-        
+        #events
+          %h2
+            Agenda de eventos
+          %div
+            %h3
+              = link_to '28 de Noviembre', nil
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur urna elit, dignissim vel ornare vel, fringilla eget neque. Sed id pulvinar enim. Fusce id ornare elit, sit amet accumsan ipsum.
+            = link_to 'Seguir leyendo', nil, class: 'read-more'
+          %div
+            %h3
+              = link_to '28 de Noviembre', nil
+            %p
+              Nam in ornare justo, nec rhoncus massa. Sed at augue ac diam mollis adipiscing. Nulla facilisi. Curabitur rhoncus elit leo, sit amet tristique metus porta id. Sed eget cursus ante, ac pretium nibh.
+            = link_to 'Seguir leyendo', nil, class: 'read-more'
+          .clear
+        #bottom-banner
+          = image_tag('bottom-banner-example.jpg')
+          %p
+            Comparte en redes sociales la imágenes de #SVAdelante que más te representan
+        .clear
+      #footer
+        #address
+          Av. uno y calle dos, San Salvador
+          %br
+          Tel. +503 2223-4789
+          %br
+          = link_to 'Contáctenos', nil
+        = image_tag 'footer-text.jpg'
+        .clear
+      #copyright
+        Patrocinado por
+        = link_to 'Clasificados El Salvador', 'http://www.burulo.com'
+        Burulo.com
         
       

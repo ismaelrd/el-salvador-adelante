@@ -484,4 +484,91 @@ b {
   width: 458px;
 }
 
+#events {
+  background: #727d83;
+  border-top: 3px #626b70 solid;
+  color: #fff;
+  float: left;
+  padding: 18px 20px 10px 30px;
+  width: 452px;
+  
+  h2 {
+    font-size: 21px;
+  }
+  
+  h3 {
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    
+    a {
+      color: #fff;
+    }
+  }
+  
+  div {
+    float: left;
+    padding: 10px 30px 0 0;
+    width: 196px;
+  }
+  
+  p {
+    height: 86px;
+    line-height: 17px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: justify;
+  }
+  
+  a.read-more {
+    color: #aac7d5;
+    font-size: 16px;
+  }
+}
+
+#bottom-banner {
+  background: #5fb84e;
+  border-top: 3px #578f50 solid;
+  color: #fff;
+  float: left;
+  padding: 14px;
+  width: 430px;
+  
+  p {
+    line-height: 16px;
+    padding: 9px 0 0 0;
+    width: 224px;
+  }
+}
+
+#footer {
+  background: image-url('el-salvador-adelante-gray.jpg') left 30px no-repeat;
+  color: #4d4d4b;
+  line-height: 19px;
+  padding: 30px 0 50px 0;
+  
+  img {
+    float: right;
+  }
+  
+  a {
+    color: #f05b23;
+  }
+}
+
+#address {
+  float: left;
+  margin-left: 240px;
+}
+
+#copyright {
+  border-top: 1px #808080 solid;
+  padding: 8px 0;
+  text-align: center;
+  
+  a {
+    color: #26ace1;
+  }
+}
+
 
