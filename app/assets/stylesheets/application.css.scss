@@ -1,0 +1,322 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #ebf0f3 image-url('bg-body.jpg') 0 0 repeat-x;
+  font-family: arial;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+.btn {
+  border-radius: 4px;
+  display: inline-block;
+  padding: 8px 0;
+  text-align: center;
+  
+  &.orange {
+    background: #f15a25;
+    color: #fff;
+  }
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#logo {
+  float: left;
+
+  img {
+    display: block;
+  }
+}
+
+#top-menu {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li,
+  a {
+    display: inline-block;
+    line-height: 69px;
+  }
+
+  li {
+    border-right: 1px #9db0be solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #4f5356;
+    padding: 0 12px;
+  }
+}
+
+
+#social-menu {
+  a {
+    display: inline-block;
+    line-height: 69px;
+    margin-left: 24px;
+    
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+#legend {
+  background: #d6eaf3;
+  float: left;
+  font-size: 21px;
+  line-height: 25px;
+  margin: 3px 0 0 0;
+  padding: 38px 16px;
+  width: 432px;
+}
+
+#donate {
+  background: #97d9f3;
+  float: left;
+  margin: 3px 0 0 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 275px;
+  
+  .btn {
+    margin: 0 auto 8px auto;
+    padding: 8px 30px;
+    width: 150px;
+
+    b {
+      font-size: 27px;
+    }
+  }
+
+  span {
+    color: #ed1c22;
+    font-size: 27px;
+    font-weight: bold;
+  }
+  
+  .text-link {
+    color: #002640;
+    text-decoration: underline;
+  }
+}
+
+#featured {
+  float: left;
+  width: 685px;
+  
+  img {
+    display: block;
+  }
+  
+  h2 {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .caption {
+    background: #5fb84e;
+    color: #fff;
+    height: 107px;
+    overflow: hidden;
+    padding: 16px 20px;
+  }
+  
+  p {
+    line-height: 18px;
+  }
+}
+
+#right-bar {
+  background: #fff;
+  float: right;
+  width: 275px;
+  
+  .title {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    
+    &.gray {
+      background: #626a6d;
+      color: #fff;
+    }
+    
+    &.blue {
+      background: #29ace2;
+      color: #fff;
+    }
+  }
+}
+
+#last-posts {
+  div {
+    border-top: 1px #ccc solid;
+    height: 79px;
+    padding: 8px 14px 4px 14px;
+  }
+  
+  h2 {
+    height: 40px;
+    overflow: hidden;
+
+    a {
+      color: #000;
+      font-size: 19px;
+    }
+  }
+  
+  a {
+    color: #f35a21;
+    font-size: 17px;
+    
+    &.read-more {
+      display: inline-block;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+#last-tweet {
+  background: #fff;
+  font-size: 15px;
+  line-height: 17px;
+  height: 79px;
+  padding: 10px;
+
+  a {
+    color: #38b0e4;
+  }
+}
+
+#liabilities {
+  padding: 24px 0;
+
+  h2{
+    color: #707d83;
+    float: left;
+    font-size: 31px;
+  }
+  
+  a {
+    background: #727d81;
+    color: #fff;
+    float: right;
+    font-weight: bold;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 10px;
+  }
+}
+
+#home-search {
+  background: #fff;
+  float: left;
+  margin: 0 0 0 130px;
+  padding: 0 6px;
+  width: 352px;
+
+  input {
+    border: 0;
+    font-family: arial;
+    font-size: 15px;
+    height: 29px;
+    line-height: 29px;
+    padding: 0;
+    width: 318px;
+  }
+  
+  button {
+    background: image-url('icon-search.jpg') center center no-repeat;
+    border: 0;
+    cursor: pointer;
+    height: 29px;
+    margin: 0;
+    vertical-align: middle;
+    width: 29px;
+  }
+}

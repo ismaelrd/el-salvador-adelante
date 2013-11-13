@@ -1,0 +1,87 @@
+!!! 5
+%html
+  %head
+    = display_meta_tags
+    %meta{ charset: 'utf-8' }
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = yield :scripts
+    = csrf_meta_tags
+  %body
+    #wrapper
+      #header
+        = link_to image_tag('el-salvador-adelante.jpg'), root_url, id: 'logo'
+        %ul#top-menu
+          %li= link_to 'Sobre el movimiento', nil
+          %li= link_to 'Nuestra misión y visión', nil
+          %li= link_to 'Noticias', nil
+          %li= link_to 'Fotos', nil
+          %li= link_to 'Videos', nil
+        #social-menu
+          = link_to image_tag('icon-facebook.jpg'), nil
+          = link_to image_tag('icon-twitter.jpg'), nil
+          = link_to image_tag('icon-gplus.jpg'), nil
+        #legend
+          Somos un
+          %b
+            movimiento ciudadano
+          que cree que
+          %b
+            El Salvador debe seguir cambiando
+        #donate
+          = link_to nil, class: 'btn orange' do
+            %b
+              Apoyanos
+            con una donación
+          %div
+            %span
+              100
+            personas apoyando
+            %br
+            = link_to 'ver quienes son', nil, class: 'text-link'
+        .clear
+      #main
+        #featured
+          = image_tag 'featured-example.jpg'
+          .caption
+            %h2
+              Los cambios deben seguir
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac risus sit amet libero vehicula varius.
+              Nulla arcu lectus, ornare et bibendum at, varius sed sem. Vestibulum et condimentum ligula.
+              Nulla arcu lectus, ornare et bibendum at, varius sed sem. Vestibulum et condimentum ligula.
+              Vivamus varius felis a metus ornare, sed posuere felis sollicitudin.
+        #right-bar
+          .title.gray
+            Últimos post
+          #last-posts
+            %div
+              %h2
+                = link_to '142 mil salvadoreños han sido alfabetizados', nil
+              = link_to 'Seguir leyendo', nil, class: 'read-more'
+            %div
+              %h2
+                = link_to 'Juramentan 23 Oficiales de información en La Paz', nil
+              = link_to 'Seguir leyendo', nil, class: 'read-more'
+            %div
+              %h2
+                = link_to 'Funcionarios enfrentan audiencia por delitos', nil
+              = link_to 'Seguir leyendo', nil, class: 'read-more'
+          .title.blue
+            En twitter
+          #last-tweet
+            = link_to '@ESAdelante', nil
+            \:
+            Comité con empresarios socialmente responsables, previo a la conferencia de prensa
+        .clear
+      #liabilities
+        %h2
+          Los Compromisos
+        = form_tag '' do
+          #home-search
+            = text_field_tag 'keyword', '', placeholder: 'Búsqueda'
+            = button_tag ''
+        = link_to 'Ver todos los compromisos', nil, class: 'btn'
+        .clear
+      #liabilities-links
+        = link_to 'Economía', nil, class: 
+      
