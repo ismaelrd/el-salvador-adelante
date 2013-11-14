@@ -64,3 +64,9 @@ gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', require: 'bootstrap-rails', branch: 
 
 # Integrates the Twitter Bootstrap pagination component with will_paginate
 gem 'will_paginate-bootstrap', '~> 0.2.5'
+
+# User authentication
+gem 'devise', '~> 3.2.0'
+
+# For tree structure in models
+gem 'ancestry', '~> 2.0.0'
