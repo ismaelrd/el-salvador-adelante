@@ -159,4 +159,49 @@ b {
   }
 }
 
+#breadcrumb {
+  background: #c8cdd0;
+  color: #969b9e;
+  font-size: 13px;
+  margin: 3px 0 0 0;
+  padding: 8px 10px;
+  
+  a {
+    color: #969b9e;
+    
+    &:hover {
+      color: #474747;
+    }
+  }
+  
+  b {
+    color: #474747;
+    font-weight: normal;
+  }
+}
+
+#content {
+  background: #fff;
+  color: #444;
+  padding: 14px;
+
+  h1,
+  h2,
+  h3 {
+    color: #69777a;
+    
+    a {
+      color: #69777a;  
+    }
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+  
+  h3 {
+    font-size: 21px;
+  }
+}
+
 

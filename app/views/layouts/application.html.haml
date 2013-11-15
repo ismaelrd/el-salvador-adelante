@@ -3,7 +3,7 @@
   %head
     = display_meta_tags
     %meta{ charset: 'utf-8' }
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = include_default_stylesheets
     = yield :scripts
     = csrf_meta_tags
   %body
@@ -21,7 +21,16 @@
           = link_to image_tag('icon-twitter.jpg'), nil
           = link_to image_tag('icon-gplus.jpg'), nil
         .clear
-
+      #breadcrumb
+        = link_to 'Inicio', nil
+        >
+        = link_to 'Noticias', nil
+        >
+        %b
+          Los cambios deben seguir
+      #content
+        = yield
+        .clear
       #footer
         #address
           Av. uno y calle dos, San Salvador

@@ -1,0 +1,93 @@
+hr {
+  background: transparent;
+  border: 0;
+  border-top: 1px #b4c8cf solid;
+}
+
+.share {
+  a {
+    display: inline-block;
+    margin: 10px 30px 0 0;
+  }
+}
+
+#left{
+  background: #c7dde8;
+  float: left;
+  width: 222px;
+  
+  h2 {
+    background: #426b7f;
+    color: #fff;
+    font-size: 21px;
+    line-height: 36px;
+    padding: 0 20px;
+  }
+  
+  a {
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #426d80;
+    display: block;
+    line-height: 46px;
+    margin-left: 20px;
+    padding: 0 0 0 40px;
+    
+    &.economy {
+      background-image: image-url('icon-economy-medium.jpg');
+    }
+
+    &.security {
+      background-image: image-url('icon-security-medium.jpg');
+    }
+
+    &.women {
+      background-image: image-url('icon-women-medium.jpg');
+    }
+
+    &.agriculture {
+      background-image: image-url('icon-agriculture-medium.jpg');
+    }
+
+    &.jobs {
+      background-image: image-url('icon-jobs-medium.jpg');
+    }
+
+    &.development {
+      background-image: image-url('icon-development-medium.jpg');
+    }
+
+    &.education {
+      background-image: image-url('icon-education-medium.jpg');
+    }
+
+    &.young {
+      background-image: image-url('icon-young-medium.jpg');
+    }
+
+    &.health {
+      background-image: image-url('icon-health-medium.jpg');
+    }
+  }
+}
+
+#right {
+  float: right;
+  width: 696px;
+
+  h1 {
+    padding: 20px 0 10px 0;
+  }
+
+  .content {
+    line-height: 18px;
+    margin: 10px 0;
+    text-align: justify;
+
+    p {
+      margin: 13px 0;
+    }
+  }
+}
+
+  

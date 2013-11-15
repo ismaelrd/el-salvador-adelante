@@ -59,4 +59,8 @@ Adelante::Application.routes.draw do
   root 'categories#index'
 
   resources :categories
+  resources :posts
+  resources :pictures
+  resources :videos
+  resources :sponsors
 end
