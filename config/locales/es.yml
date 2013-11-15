@@ -3,6 +3,7 @@ es:
     models:
       user: Usuario
       post: Publicación
+      page: Página
     attributes:
       user:
         email: Correo electrónico
@@ -23,10 +24,19 @@ es:
         priority: Prioridad
         name: Título
         url: Enlace
+      page:
+        active: ¿Activo?
+        priority: Prioridad
+        name: Título
+        created_at: Fecha de creación
+        description: Descripción
+        content: Contenido
+        in_menu: ¿En el menú?
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
       articles: Artículos
+      pages: Páginas
   users:
     sessions:
       new:
@@ -51,6 +61,18 @@ es:
         dashboard: Dashboard
         posts: Publicaciones
         articles: Noticias
+    pages:
+      index:
+        title: Listado de páginas
+      new:
+        title: Páginas <small>Nueva</small>
+      edit:
+        title: Páginas <small>Editar</small>
+      form:
+        image_gallery: Galería de imágenes
+        video_gallery: Galería de vídeos
+        add_image: Agregar imagen
+        add_video: Agregar vídeo
   layouts:
     admin:
       application:
@@ -76,6 +98,13 @@ es:
         success: Publicación actualizada exitosamente
       destroy:
         success: Publicación eliminada exitosamente
+    pages:
+      create:
+        success: Página creada exitosamente
+      update:
+        success: Página actualizada exitosamente
+      destroy:
+        success: Página eliminada exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:

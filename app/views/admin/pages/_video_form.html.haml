@@ -1,0 +1,12 @@
+.row
+  .col-xs-2
+    = f.text_field :priority, class: 'form-control', placeholder: t('activerecord.attributes.video.priority')
+  .col-xs-4
+    = f.text_field :name, class: 'form-control', placeholder: t('activerecord.attributes.video.name')
+  .col-xs-4
+    = f.text_field :url, class: 'form-control', placeholder: t('activerecord.attributes.video.url')
+  .col-xs-2
+    = f.link_to_remove class: 'btn btn-danger btn-sm' do
+      %i.glyphicon.glyphicon-trash
+      = t('labels.remove')
+%br
