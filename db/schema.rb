@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114154316) do
+ActiveRecord::Schema.define(version: 20131115163615) do
 
   create_table "articles", force: true do |t|
     t.boolean  "active",             default: true
@@ -120,6 +120,20 @@ ActiveRecord::Schema.define(version: 20131114154316) do
   end
 
   add_index "posts_tags", ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", using: :btree
+
+  create_table "sponsors", force: true do |t|
+    t.string   "kind",          default: "anonymous"
+    t.string   "alias"
+    t.string   "name"
+    t.string   "document_type"
+    t.string   "document"
+    t.float    "amount"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sponsors", ["kind"], name: "index_sponsors_on_kind", using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "name"
