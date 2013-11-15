@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
 
   ## associations
   has_many :posts, dependent: :destroy
+
+  ## methods
+  def full_name
+    [first_name, last_name].join(', ')
+  end
 end

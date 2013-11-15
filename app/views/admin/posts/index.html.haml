@@ -1,0 +1,27 @@
+.page-header
+  %h1
+    = t('.title')
+.clearfix
+  = link_to new_admin_post_path, class: 'btn btn-primary btn-xs pull-right' do
+    %i.glyphicon.glyphicon-plus-sign
+    = t('labels.new')
+
+- if @posts.any?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th
+          = t('activerecord.attributes.post.active')
+        %th
+          = t('activerecord.attributes.post.featured')
+        %th
+          = t('activerecord.attributes.post.name')
+        %th
+          = t('activerecord.attributes.post.created_at')
+        %th{ colspan: 2 }
+    %tbody
+      = render @posts
+
+- else
+  .alert.alert-info
+    = t('labels.no_results')
