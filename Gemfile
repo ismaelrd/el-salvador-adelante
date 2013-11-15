@@ -70,3 +70,7 @@ gem 'devise', '~> 3.2.0'
 
 # For tree structure in models
 gem 'ancestry', '~> 2.0.0'
+
+# Tinymce support
+gem 'tinymce-rails', '~> 4.0.10'
+gem 'tinymce-rails-langs', '~> 4.0'

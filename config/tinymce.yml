@@ -1,0 +1,16 @@
+default:
+  theme_advanced_toolbar_align: left
+  theme_advanced_buttons3_add:
+    - tablecontrols
+  plugins:
+    - table
+  language: es
+
+alternate:
+  theme_advanced_toolbar_location: top
+  theme_advanced_toolbar_align: left
+  theme_advanced_buttons3_add:
+    - tablecontrols
+  plugins:
+    - table
+  language: es

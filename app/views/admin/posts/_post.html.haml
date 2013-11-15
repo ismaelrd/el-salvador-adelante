@@ -1,0 +1,17 @@
+%tr
+  %td
+    = I18n.t((post.active? == true).to_s)
+  %td
+    = I18n.t((post.featured? == true).to_s)
+  %td
+    = post.name
+  %td
+    = post.created_at.try(:strftime, '%d/%m/%Y')
+  %td
+    = link_to edit_admin_post_path(post), class: 'btn btn-primary btn-xs' do
+      %i.glyphicon.glyphicon-edit
+      = t('labels.edit')
+  %td
+    = link_to admin_post_path(post), class: 'btn btn-danger btn-xs', method: :delete, confirm: t('labels.confirm_delete') do
+      %i.glyphicon.glyphicon-trash
+      = t('labels.delete')
