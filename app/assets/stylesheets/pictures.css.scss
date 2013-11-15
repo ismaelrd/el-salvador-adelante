@@ -1,0 +1,44 @@
+#featured {
+  background: #478a3a;
+  border-bottom: 3px #9dbb99 solid;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 24px 0;
+  text-align: center;
+  
+  h1 {
+    color: #fff;
+  }
+  
+  span {
+    line-height: 48px;
+  }
+}
+
+#list {
+  .picture {
+    float: left;
+    padding: 12px 15px 12px 0;
+    width: 295px;
+  }
+  
+  img {
+    float: left;
+    width: 120px;
+  }
+  
+  .info {
+    float: right;
+    font-size: 13px;
+    width: 164px;
+    
+    span {
+      color: #222;
+      line-height: 22px;
+    }
+    
+    .text-link {
+      color: #f47040;
+    }
+  }
+}

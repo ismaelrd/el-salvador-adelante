@@ -1,0 +1,82 @@
+#left
+  #featured  
+    %h1
+      = link_to 'Los cambios deben seguir', nil
+    %span.date
+      7 de noviembre del 2013
+    
+    = image_tag 'featured-example.jpg'
+    
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
+      Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget,
+      consectetur non tellus. Praesent vulputate risus eu nisl ornare facilisis. Integer ac justo et mi semper volutpat et ac justo.
+      Pellentesque ac elementum tellus. Praesent suscipit commodo neque quis faucibus. Ut et magna egestas, malesuada elit a,
+      tincidunt diam. Etiam id euismod felis. Integer imperdiet libero ipsum, quis gravida odio consequat sit amet.
+
+    = link_to 'Seguir leyendo', nil, class: 'read-more'
+
+  %div
+    .post.left.bordered
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
+        Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .post.right
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
+        Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .clear
+
+  .list
+    .post.left
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .post.right
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .clear
+    .post.left
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .post.right
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .clear
+    .post.left
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .post.right
+      %h3
+        = link_to 'Los cambios deben seguir', nil
+      %span.date
+        7 de noviembre del 2013
+      = link_to 'Seguir leyendo', nil, class: 'read-more'
+    .clear
+
+#right  
+  = render partial: 'right_bar'

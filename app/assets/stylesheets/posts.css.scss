@@ -1,0 +1,156 @@
+.read-more,
+.date {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.read-more {
+  color: #f46f42;
+}
+
+.date {
+  color: #222;
+  display: block;
+  line-height: 36px;
+}
+
+#left {
+  float: left;
+  width: 640px;
+}
+
+#post,
+#featured {
+  img {
+    width: 640px;
+  }
+}
+
+#featured,
+.post {
+  
+  p {
+    height: 72px;
+    line-height: 18px;
+    margin: 10px 0;
+    overflow: hidden;
+    text-align: justify;
+  }  
+}
+
+#post {
+  .content {
+    line-height: 18px;
+    margin: 10px 0;
+    text-align: justify;
+  }
+  
+  p {
+    margin: 13px 0;
+  }
+}
+
+.post {
+  margin: 20px 0;
+  width: 299px;
+
+  &.left {
+    float: left;
+    padding: 0 20px 0 0;
+
+    &.bordered {
+      border-right: 1px #69767c solid;
+    }
+  }
+  
+  &.right {
+    float: right;
+    padding: 0 0 0 20px;
+  }
+}
+
+.list {
+  border-top: 1px #717c82 dashed;
+}
+
+#right {
+  float: right;
+  padding: 0 0 0 20px;
+  width: 272px;
+}
+
+#liabilities {
+  background: #01b0f3;
+  border-top: 12px #0154a4 solid;
+  padding: 16px 0;
+  text-align: center;
+  
+  h2 {
+    color: #02376d;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 16px 0;
+  }
+}
+
+#last-posts {
+  background: #dce1e4;
+  margin: 6px 0;
+  padding: 0 0 20px 0;
+  
+  .date {
+    font-size: 13px;
+  }
+  
+  h2 {
+    background: #626a6d;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 12px;
+  }
+  
+  div {
+    border-bottom: 1px #ccc solid;
+    padding: 0 10px 10px 10px;
+  }
+  
+  h3 {
+    font-size: 17px;
+    line-height: 19px;
+    padding: 0 0 10px 0;
+    
+    a {
+      color: #222;
+    }
+  }
+}
+
+#donate {
+  background: #5fb84e;
+  color: #002740;
+  padding: 10px 0;
+  text-align: center;
+  
+  span {
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  a.text-link {
+    color: #002740;
+    text-decoration: underline;
+  }
+  
+  .btn {
+    background: #f15a25;
+    color: #fff;
+    margin: 0 0 10px 0;
+    padding: 10px 40px;
+    width: 120px;
+    
+    b {
+      font-size: 21px;
+    }
+  }
+}

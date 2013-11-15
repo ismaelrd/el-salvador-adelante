@@ -1,17 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,7 +49,7 @@ table {
 }
 
 body {
-  background: #ebf0f3 image-url('bg-body.jpg') 0 0 repeat-x;
+  background: #ebf0f3 image-url('bg-body-internal.jpg') 0 0 repeat-x;
   font-family: arial;
   font-size: 14px;
   margin: 0;
@@ -116,7 +102,7 @@ b {
   li,
   a {
     display: inline-block;
-    line-height: 69px;
+    line-height: 97px;
   }
 
   li {
@@ -131,413 +117,15 @@ b {
   }
 }
 
-
 #social-menu {
   a {
     display: inline-block;
-    line-height: 69px;
+    line-height: 97px;
     margin-left: 24px;
     
     img {
       vertical-align: middle;
     }
-  }
-}
-
-#legend {
-  background: #d6eaf3;
-  float: left;
-  font-size: 21px;
-  line-height: 25px;
-  margin: 3px 0 0 0;
-  padding: 38px 16px;
-  width: 432px;
-}
-
-#donate {
-  background: #97d9f3;
-  float: left;
-  margin: 3px 0 0 0;
-  padding: 10px 0;
-  text-align: center;
-  width: 275px;
-  
-  .btn {
-    margin: 0 auto 8px auto;
-    padding: 8px 30px;
-    width: 150px;
-
-    b {
-      font-size: 27px;
-    }
-  }
-
-  span {
-    color: #ed1c22;
-    font-size: 27px;
-    font-weight: bold;
-  }
-  
-  .text-link {
-    color: #002640;
-    text-decoration: underline;
-  }
-}
-
-#featured {
-  float: left;
-  width: 685px;
-  
-  img {
-    display: block;
-  }
-  
-  h2 {
-    font-size: 27px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .caption {
-    background: #5fb84e;
-    color: #fff;
-    height: 107px;
-    overflow: hidden;
-    padding: 16px 20px;
-  }
-  
-  p {
-    line-height: 18px;
-  }
-}
-
-#right-bar {
-  background: #fff;
-  float: right;
-  width: 275px;
-  
-  .title {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 14px;
-    
-    &.gray {
-      background: #626a6d;
-      color: #fff;
-    }
-    
-    &.blue {
-      background: #29ace2;
-      color: #fff;
-    }
-  }
-}
-
-#last-posts {
-  div {
-    border-top: 1px #ccc solid;
-    height: 79px;
-    padding: 8px 14px 4px 14px;
-  }
-  
-  h2 {
-    height: 40px;
-    overflow: hidden;
-
-    a {
-      color: #000;
-      font-size: 19px;
-    }
-  }
-  
-  a {
-    color: #f35a21;
-    font-size: 17px;
-    
-    &.read-more {
-      display: inline-block;
-      margin: 10px 0 0 0;
-    }
-  }
-}
-
-#last-tweet {
-  background: #fff;
-  font-size: 15px;
-  line-height: 17px;
-  height: 79px;
-  padding: 10px;
-
-  a {
-    color: #38b0e4;
-  }
-}
-
-#liabilities {
-  padding: 24px 0;
-
-  h2{
-    color: #707d83;
-    float: left;
-    font-size: 31px;
-  }
-  
-  a {
-    background: #727d81;
-    color: #fff;
-    float: right;
-    font-weight: bold;
-    height: 29px;
-    line-height: 29px;
-    padding: 0 10px;
-  }
-}
-
-#home-search {
-  background: #fff;
-  float: left;
-  margin: 0 0 0 130px;
-  padding: 0 6px;
-  width: 352px;
-
-  input {
-    border: 0;
-    font-family: arial;
-    font-size: 15px;
-    height: 29px;
-    line-height: 29px;
-    padding: 0;
-    width: 318px;
-  }
-  
-  button {
-    background: image-url('icon-search.jpg') center center no-repeat;
-    border: 0;
-    cursor: pointer;
-    height: 29px;
-    margin: 0;
-    vertical-align: middle;
-    width: 29px;
-  }
-}
-
-#liabilities-links {
-  a {
-    background: #c7dde8;
-    background-color: #c7dde8;
-    background-position: center 30px;
-    background-repeat: no-repeat;
-    color: #55798f;
-    float: left;
-    margin-left: 6px;
-    padding: 72px 0 24px 0;
-    text-align: center;
-    width: 132px;
-    
-    &.economy {
-      background-image: image-url('icon-economy.jpg');
-      margin-left: 0;
-    }
-
-    &.security {
-      background-image: image-url('icon-security.jpg');
-    }
-
-    &.women {
-      background-image: image-url('icon-women.jpg');
-    }
-
-    &.agriculture {
-      background-image: image-url('icon-agriculture.jpg');
-    }
-
-    &.jobs {
-      background-image: image-url('icon-jobs.jpg');
-    }
-
-    &.development {
-      background-image: image-url('icon-development.jpg');
-    }
-
-    &.education {
-      background-image: image-url('icon-education.jpg');
-    }
-  }
-}
-
-#main {
-  background: #fff;
-  margin: 8px 0 0 0;
-}
-
-#news {
-  float: left;
-  padding: 26px 24px 10px 24px;
-  width: 454px;
-  
-  h2 {
-    color: #436c82;
-    font-size: 25px;
-    padding: 0 0 20px 0;
-  }
-  
-  div {
-    padding: 5px 0;
-  }
-  
-  .pic {
-    float: left;
-    width: 190px;
-  }
-
-  h3 {
-    float: left;
-    height: 74px;
-    line-height: 18px;
-    margin-left: 12px;
-    overflow: hidden;
-    width: 252px;
-    
-    a {
-      color: #29aae3;
-    }
-  }
-  
-  a {
-    font-size: 17px;
-  
-    &.read-more {
-      color: #f15b26;
-      display: inline-block;
-      margin: 10px 0 0 12px;
-    }
-  }
-}
-
-#media {
-  float: left;
-  position: relative;
-  width: 458px;
-}
-
-#join-us {
-  background: image-url('bg-join-us.jpg') center center no-repeat;
-  color: #fff;
-  font-size: 27px;
-  font-weight: bold;
-  height: 120px;
-  padding: 20px 0 0 170px;
-  position: absolute;
-  right: -18px;
-  text-align: center;
-  top: 34px;
-  width: 305px;
-  
-  a {
-    background: #426b7f;
-    color: #fff;
-    font-size: 21px;
-    margin-top: 10px;
-    padding: 10px 56px;
-  }
-}
-
-#gallery {
-  padding: 186px 12px 0 0;
-  
-  h2 {
-    color: #436c82;
-    font-size: 25px;
-    padding: 0 0 20px 0;
-  }
-}
-
-#social {
-  background: #c7dde8;
-  color: #436c80;
-  float: left;
-  font-size: 23px;
-  font-weight: bold;
-  line-height: 30px;
-  padding: 11px 30px;
-  width: 442px;
-  
-  a {
-    display: inline-block;
-    margin-left: 12px;
-  }
-  
-  img {
-    vertical-align: middle;
-  }
-}
-
-#what-do-you-want {
-  background: #5fb84e;
-  color: #fff;
-  float: left;
-  font-size: 27px;
-  font-weight: bold;
-  line-height: 30px;
-  padding: 12px 0px;
-  text-align: center;
-  width: 458px;
-}
-
-#events {
-  background: #727d83;
-  border-top: 3px #626b70 solid;
-  color: #fff;
-  float: left;
-  padding: 18px 20px 10px 30px;
-  width: 452px;
-  
-  h2 {
-    font-size: 21px;
-  }
-  
-  h3 {
-    font-size: 23px;
-    font-weight: bold;
-    padding: 10px 0 5px 0;
-    
-    a {
-      color: #fff;
-    }
-  }
-  
-  div {
-    float: left;
-    padding: 10px 30px 0 0;
-    width: 196px;
-  }
-  
-  p {
-    height: 86px;
-    line-height: 17px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    text-align: justify;
-  }
-  
-  a.read-more {
-    color: #aac7d5;
-    font-size: 16px;
-  }
-}
-
-#bottom-banner {
-  background: #5fb84e;
-  border-top: 3px #578f50 solid;
-  color: #fff;
-  float: left;
-  padding: 14px;
-  width: 430px;
-  
-  p {
-    line-height: 16px;
-    padding: 9px 0 0 0;
-    width: 224px;
   }
 }
 
@@ -568,6 +156,51 @@ b {
   
   a {
     color: #26ace1;
+  }
+}
+
+#breadcrumb {
+  background: #c8cdd0;
+  color: #969b9e;
+  font-size: 13px;
+  margin: 3px 0 0 0;
+  padding: 8px 10px;
+  
+  a {
+    color: #969b9e;
+    
+    &:hover {
+      color: #474747;
+    }
+  }
+  
+  b {
+    color: #474747;
+    font-weight: normal;
+  }
+}
+
+#content {
+  background: #fff;
+  color: #444;
+  padding: 14px;
+
+  h1,
+  h2,
+  h3 {
+    color: #69777a;
+    
+    a {
+      color: #69777a;  
+    }
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+  
+  h3 {
+    font-size: 21px;
   }
 }
 
