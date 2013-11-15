@@ -1,14 +1,15 @@
+= draw_errors(post)
 = form_for [:admin, post], html: { class: 'form-horizontal', role: 'form' } do |f|
   .form-group
     = f.label :active, class: 'col-sm-2 control-label'
     .col-sm-3
       .checkbox
-        = f.check_box :active, :required => false
+        = f.check_box :active
   .form-group
     = f.label :featured, class: 'col-sm-2 control-label'
     .col-sm-3
       .checkbox
-        = f.check_box :featured, :required => false
+        = f.check_box :featured
   .form-group
     = f.label :photo, class: 'col-sm-2 control-label'
     .col-sm-10
@@ -17,11 +18,11 @@
   .form-group
     = f.label :name, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_field :name, :required => true, class: 'form-control'
+      = f.text_field :name, class: 'form-control'
   .form-group
     = f.label :description, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_area :description, :required => false, class: 'form-control', rows: '3'
+      = f.text_area :description, class: 'form-control', rows: '3'
   .form-group
     = f.label :content, class: 'col-sm-2 control-label'
     .col-sm-10
