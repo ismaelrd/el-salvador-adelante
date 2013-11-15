@@ -33,7 +33,7 @@ class Admin::PostsController < Admin::ApplicationController
     helper_method :post
 
     def post_params
-      params.permit(post: [ :active, :featured, :photo, :name, :description, :content ])
+      params.permit(:id, post: [ :active, :featured, :photo, :name, :description, :content, pictures_attributes: [:name, :attachment, :id, :_destroy, :priority], videos_attributes: [:name, :url, :id, :_destroy, :priority] ])
     end
 
 end

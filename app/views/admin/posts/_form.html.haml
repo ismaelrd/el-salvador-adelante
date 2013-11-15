@@ -1,5 +1,5 @@
 = draw_errors(post)
-= form_for [:admin, post], html: { class: 'form-horizontal', role: 'form' } do |f|
+= nested_form_for [:admin, post], html: { class: 'form-horizontal', role: 'form' } do |f|
   .form-group
     = f.label :active, class: 'col-sm-2 control-label'
     .col-sm-3
@@ -27,6 +27,38 @@
     = f.label :content, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_area :content, class: 'form-control tinymce', rows: '15'
+  .form-group
+    = label_tag t('.image_gallery'), nil, class: 'col-sm-2 control-label'
+    .col-sm-10
+      .row
+        .col-xs-2.text-center
+          = t('activerecord.attributes.picture.priority')
+        .col-xs-3.text-center
+          = t('activerecord.attributes.picture.name')
+        .col-xs-5.text-center
+          = t('activerecord.attributes.picture.attachment')
+        .col-xs-2
+      = f.fields_for :pictures do |ff|
+        = render partial: 'picture_form', locals: { f: ff }
+      = f.link_to_add :pictures, class: 'btn btn-default btn-sm' do
+        %i.glyphicon.glyphicon-plus-sign
+        = t('.add_image')
+  .form-group
+    = label_tag t('.video_gallery'), nil, class: 'col-sm-2 control-label'
+    .col-sm-10
+      .row
+        .col-xs-2.text-center
+          = t('activerecord.attributes.video.priority')
+        .col-xs-3.text-center
+          = t('activerecord.attributes.video.name')
+        .col-xs-5.text-center
+          = t('activerecord.attributes.video.url')
+        .col-xs-2
+      = f.fields_for :videos do |ff|
+        = render partial: 'video_form', locals: { f: ff }
+      = f.link_to_add :videos, class: 'btn btn-default btn-sm' do
+        %i.glyphicon.glyphicon-plus-sign
+        = t('.add_video')
   .form-group
     .col-sm-offset-2.col-sm-10.text-right
       = link_to t('labels.back'), admin_posts_path, class: 'btn btn-default'

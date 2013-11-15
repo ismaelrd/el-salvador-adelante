@@ -74,3 +74,6 @@ gem 'ancestry', '~> 2.0.0'
 # Tinymce support
 gem 'tinymce-rails', '~> 4.0.10'
 gem 'tinymce-rails-langs', '~> 4.0'
+
+# Rails plugin to conveniently handle multiple models in a single form
+gem 'nested_form', '~> 0.3.2'

@@ -9,3 +9,4 @@
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/dropdown
 #= require tinymce-jquery
+#= require jquery_nested_form

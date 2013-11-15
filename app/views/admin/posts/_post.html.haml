@@ -12,6 +12,6 @@
       %i.glyphicon.glyphicon-edit
       = t('labels.edit')
   %td
-    = link_to admin_post_path(post), class: 'btn btn-danger btn-xs', method: :delete, confirm: t('labels.confirm_delete') do
+    = link_to admin_post_path(post), class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: t('labels.confirm_delete') } do
       %i.glyphicon.glyphicon-trash
       = t('labels.delete')
