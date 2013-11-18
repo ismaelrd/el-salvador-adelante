@@ -5,6 +5,7 @@ es:
       post: Publicación
       page: Página
       article: Noticia
+      category: Categoría
     attributes:
       user:
         email: Correo electrónico
@@ -41,11 +42,17 @@ es:
         description: Descripción
         content: Contenido
         photo: Imagen principal
+      category:
+        id: ID
+        name: Título
+        description: Descripción
+        created_at: Fecha de creación
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
       articles: Noticias
       pages: Páginas
+      categories: Categorías
   users:
     sessions:
       new:
@@ -94,6 +101,11 @@ es:
         video_gallery: Galería de vídeos
         add_image: Agregar imagen
         add_video: Agregar vídeo
+    categories:
+      index:
+        title: Listado de categorías
+      edit:
+        title: Categorías <small>Editar</small>
   layouts:
     admin:
       application:
@@ -133,6 +145,9 @@ es:
         success: Noticia actualizada exitosamente
       destroy:
         success: Noticia eliminada exitosamente
+    categories:
+      update:
+        success: Categoría actualizada exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
