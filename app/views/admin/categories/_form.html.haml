@@ -1,0 +1,14 @@
+= draw_errors(category)
+= nested_form_for [:admin, category], html: { class: 'form-horizontal', role: 'form' } do |f|
+  .form-group
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :description, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :description, class: 'form-control', rows: '3'
+  .form-group
+    .col-sm-offset-2.col-sm-10.text-right
+      = link_to t('labels.back'), admin_categories_path, class: 'btn btn-default'
+      = f.submit t('labels.save'), class: 'btn btn-primary'

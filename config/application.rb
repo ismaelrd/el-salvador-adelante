@@ -23,3 +23,5 @@ module Adelante
     config.secret_key_base = 'Ymy9+EiAKqp7n8KFP6qhzA=='
   end
 end
+
+Config = YAML.load_file("#{Rails.root}/config/config.yml").with_indifferent_access

@@ -6,7 +6,7 @@ class Page < ActiveRecord::Base
   KIND = %w(page)
 
   ## validations
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 200 }
   validates :priority, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :kind, inclusion: { in: KIND }
 
