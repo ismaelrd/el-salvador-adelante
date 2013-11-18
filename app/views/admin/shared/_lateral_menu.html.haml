@@ -1,4 +1,5 @@
 .list-group
   = link_to t('activerecord.controllers.dashboard'), admin_root_path, class: "list-group-item #{controller_name == 'dashboard' ? 'active' : ''}"
-  = link_to t('activerecord.controllers.articles'), '#', class: "list-group-item #{controller_name == 'articles' ? 'active' : ''}"
+  = link_to t('activerecord.controllers.articles'), admin_articles_path, class: "list-group-item #{controller_name == 'articles' ? 'active' : ''}"
+  = link_to t('activerecord.controllers.pages'), admin_pages_path, class: "list-group-item #{controller_name == 'pages' ? 'active' : ''}"
   = link_to t('activerecord.controllers.posts'), admin_posts_path, class: "list-group-item #{controller_name == 'posts' ? 'active' : ''}"

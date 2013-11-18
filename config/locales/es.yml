@@ -3,6 +3,8 @@ es:
     models:
       user: Usuario
       post: Publicación
+      page: Página
+      article: Noticia
     attributes:
       user:
         email: Correo electrónico
@@ -23,10 +25,27 @@ es:
         priority: Prioridad
         name: Título
         url: Enlace
+      page:
+        active: ¿Activo?
+        priority: Prioridad
+        name: Título
+        created_at: Fecha de creación
+        description: Descripción
+        content: Contenido
+        in_menu: ¿En el menú?
+      article:
+        active: ¿Activo?
+        featured: ¿Destacado?
+        name: Título
+        created_at: Fecha de creación
+        description: Descripción
+        content: Contenido
+        photo: Imagen principal
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
-      articles: Artículos
+      articles: Noticias
+      pages: Páginas
   users:
     sessions:
       new:
@@ -51,6 +70,30 @@ es:
         dashboard: Dashboard
         posts: Publicaciones
         articles: Noticias
+    pages:
+      index:
+        title: Listado de páginas
+      new:
+        title: Páginas <small>Nueva</small>
+      edit:
+        title: Páginas <small>Editar</small>
+      form:
+        image_gallery: Galería de imágenes
+        video_gallery: Galería de vídeos
+        add_image: Agregar imagen
+        add_video: Agregar vídeo
+    articles:
+      index:
+        title: Listado de noticias
+      new:
+        title: Noticias <small>Nueva</small>
+      edit:
+        title: Noticias <small>Editar</small>
+      form:
+        image_gallery: Galería de imágenes
+        video_gallery: Galería de vídeos
+        add_image: Agregar imagen
+        add_video: Agregar vídeo
   layouts:
     admin:
       application:
@@ -76,6 +119,20 @@ es:
         success: Publicación actualizada exitosamente
       destroy:
         success: Publicación eliminada exitosamente
+    pages:
+      create:
+        success: Página creada exitosamente
+      update:
+        success: Página actualizada exitosamente
+      destroy:
+        success: Página eliminada exitosamente
+    articles:
+      create:
+        success: Noticia creada exitosamente
+      update:
+        success: Noticia actualizada exitosamente
+      destroy:
+        success: Noticia eliminada exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:

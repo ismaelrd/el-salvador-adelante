@@ -53,6 +53,7 @@ Adelante::Application.routes.draw do
     root to: 'dashboard#index'
     resources :articles, except: [:show]
     resources :posts, except: [:show]
+    resources :pages, except: [:show]
   end
 
 
