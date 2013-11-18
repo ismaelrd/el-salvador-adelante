@@ -14,14 +14,46 @@
   line-height: 36px;
 }
 
+.thumb {
+  position: relative;
+
+  &.video {
+    img {
+      width: 200px;
+
+      &.play {
+        left: 55px;
+        position: absolute;
+        top: 44px;
+        width: 77px;
+      }
+    }
+  }
+  
+  &.right {
+    float: right;
+    margin: 4px 0 4px 10px;
+  }
+  
+  &.left {
+    float: left;
+    margin: 4px 10px 4px 0;
+  }
+}
+
 #left {
   float: left;
   width: 640px;
 }
 
-#post,
 #featured {
   img {
+    width: 640px;
+  }
+}
+
+#post {
+  img.header {
     width: 640px;
   }
 }

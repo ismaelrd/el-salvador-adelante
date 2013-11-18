@@ -1,0 +1,4 @@
+- unless picture.nil?
+  .thumb.picture{ class: align }
+    = link_to picture.attachment.url(:normal), class: 'fancybox' do
+      = image_tag picture.attachment.url(:small)

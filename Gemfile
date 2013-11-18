@@ -77,3 +77,6 @@ gem 'tinymce-rails-langs', '~> 4.0'
 
 # Rails plugin to conveniently handle multiple models in a single form
 gem 'nested_form', '~> 0.3.2'
+
+# Use FancyBox with Rails
+gem 'fancybox-rails', '~> 0.2.1'
