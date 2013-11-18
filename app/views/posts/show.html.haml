@@ -5,26 +5,9 @@
     %span.date
       7 de noviembre del 2013
     
-    = image_tag 'featured-example.jpg'
+    = image_tag 'featured-example.jpg', class: 'header'
     
     .content
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-        Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget,
-        consectetur non tellus. Praesent vulputate risus eu nisl ornare facilisis. Integer ac justo et mi semper volutpat et ac justo.
-        Pellentesque ac elementum tellus. Praesent suscipit commodo neque quis faucibus. Ut et magna egestas, malesuada elit a,
-        tincidunt diam. Etiam id euismod felis. Integer imperdiet libero ipsum, quis gravida odio consequat sit amet.
-      %p
-        Nunc tristique ac dolor a ultricies. Quisque iaculis justo risus, vel tempus neque tristique eget.
-        Curabitur mollis ac tortor ac tristique. Suspendisse eget eros tempus, blandit orci non, viverra nunc.
-        Vestibulum tristique purus vel interdum pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Sed nec arcu lobortis, interdum ligula at, porttitor tellus. Sed mi ante, aliquet
-        pharetra erat quis, placerat aliquam leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-        per inceptos himenaeos. In egestas commodo nunc molestie tempor.
-      %p
-        Sed rhoncus justo nec felis elementum eleifend. Sed eget bibendum lorem. Aenean eget leo porta, facilisis
-        quam sit amet, ultrices turpis. In et erat elit. Nulla facilisi. Donec mollis non dolor at scelerisque.
-        Mauris scelerisque augue sit amet ligula facilisis ultricies. In hac habitasse platea dictumst. Nulla sit
-        amet lorem consectetur, malesuada elit eu, sodales leo.
+      = content_format @post.content, @media
 #right  
   = render partial: 'right_bar'

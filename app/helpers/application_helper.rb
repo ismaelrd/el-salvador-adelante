@@ -61,5 +61,25 @@ module ApplicationHelper
   def assets_exists? asset_path
     Adelante::Application.assets.find_asset asset_path
   end
-  
+
+  def content_format(content, media)
+    media = media.to_a
+    while (match = content.match(/\[il\]|\[ir\]|\[vl\]|\[vr\]/))
+
+      match = match.to_s
+      replace = case match
+      when '[il]'
+        render(partial: '/pictures/thumb', locals: { picture: media.delete(media.select{ |m| m.class == Asset::Picture }.first), align: :left })
+      when '[ir]'
+        render(partial: '/pictures/thumb', locals: { picture: media.delete(media.select{ |m| m.class == Asset::Picture }.first), align: :right })
+      when '[vl]'
+        render(partial: '/videos/thumb', locals: { video: media.delete(media.select{ |m| m.class == Asset::Video }.first), align: :left })
+      when '[vr]'
+        render(partial: '/videos/thumb', locals: { video: media.delete(media.select{ |m| m.class == Asset::Video }.first), align: :right })
+      end
+      content = content.sub(match, replace)
+    end
+    raw content
+  end
+
 end
