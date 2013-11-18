@@ -1,0 +1,69 @@
+= draw_errors(liability)
+= nested_form_for [:admin, liability], html: { class: 'form-horizontal', role: 'form' } do |f|
+  .form-group
+    = f.label :active, class: 'col-sm-2 control-label'
+    .col-sm-3
+      .checkbox
+        = f.check_box :active
+  .form-group
+    = f.label :priority, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :priority, class: 'form-control'
+  .form-group
+    = f.label :photo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :photo
+      = image_tag(liability.photo.url(:small)) if liability.photo.present?
+  .form-group
+    = f.label :category_id, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.collection_select :category_id, categories, :id, :name, { prompt: t('labels.select') }, { class: 'form-control' }
+  .form-group
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :description, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :description, class: 'form-control', rows: '3'
+  .form-group
+    = f.label :content, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :content, class: 'form-control tinymce', rows: '15'
+  .form-group
+    = label_tag t('.image_gallery'), nil, class: 'col-sm-2 control-label'
+    .col-sm-10
+      .row
+        .col-xs-2.text-center
+          = t('activerecord.attributes.picture.priority')
+        .col-xs-3.text-center
+          = t('activerecord.attributes.picture.name')
+        .col-xs-5.text-center
+          = t('activerecord.attributes.picture.attachment')
+        .col-xs-2
+      = f.fields_for :pictures do |ff|
+        = render partial: 'picture_form', locals: { f: ff }
+      = f.link_to_add :pictures, class: 'btn btn-default btn-sm' do
+        %i.glyphicon.glyphicon-plus-sign
+        = t('.add_image')
+  .form-group
+    = label_tag t('.video_gallery'), nil, class: 'col-sm-2 control-label'
+    .col-sm-10
+      .row
+        .col-xs-2.text-center
+          = t('activerecord.attributes.video.priority')
+        .col-xs-3.text-center
+          = t('activerecord.attributes.video.name')
+        .col-xs-5.text-center
+          = t('activerecord.attributes.video.url')
+        .col-xs-2
+      = f.fields_for :videos do |ff|
+        = render partial: 'video_form', locals: { f: ff }
+      = f.link_to_add :videos, class: 'btn btn-default btn-sm' do
+        %i.glyphicon.glyphicon-plus-sign
+        = t('.add_video')
+  .form-group
+    .col-sm-offset-2.col-sm-10.text-right
+      = link_to t('labels.back'), admin_liabilities_path, class: 'btn btn-default'
+      = f.submit t('labels.save'), class: 'btn btn-primary'
+= tinymce

@@ -6,6 +6,7 @@ es:
       page: Página
       article: Noticia
       category: Categoría
+      liability: Compromiso
     attributes:
       user:
         email: Correo electrónico
@@ -47,12 +48,21 @@ es:
         name: Título
         description: Descripción
         created_at: Fecha de creación
+      liability:
+        active: ¿Activo?
+        priority: Prioridad
+        name: Título
+        created_at: Fecha de creación
+        description: Descripción
+        content: Contenido
+        category_id: Categoría
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
       articles: Noticias
       pages: Páginas
       categories: Categorías
+      liabilities: Compromisos
   users:
     sessions:
       new:
@@ -106,6 +116,18 @@ es:
         title: Listado de categorías
       edit:
         title: Categorías <small>Editar</small>
+    liabilities:
+      index:
+        title: Listado de compromisos
+      new:
+        title: Compromisos <small>Nueva</small>
+      edit:
+        title: Compromisos <small>Editar</small>
+      form:
+        image_gallery: Galería de imágenes
+        video_gallery: Galería de vídeos
+        add_image: Agregar imagen
+        add_video: Agregar vídeo
   layouts:
     admin:
       application:
@@ -121,6 +143,7 @@ es:
     save: Guardar
     back: Regresar
     remove: Remover
+    select: '- Seleccione -'
   'true': 'Si'
   'false': 'No'
   flash:
@@ -148,6 +171,13 @@ es:
     categories:
       update:
         success: Categoría actualizada exitosamente
+    liabilities:
+      create:
+        success: Compromiso creado exitosamente
+      update:
+        success: Compromiso actualizado exitosamente
+      destroy:
+        success: Compromiso eliminado exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
