@@ -1,0 +1,30 @@
+.page-header
+  %h1
+    = t('.title')
+.clearfix
+  = link_to new_admin_liability_path, class: 'btn btn-primary btn-xs pull-right' do
+    %i.glyphicon.glyphicon-plus-sign
+    = t('labels.new')
+
+- if @liabilities.any?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th
+          = t('activerecord.attributes.liability.active')
+        %th
+          = t('activerecord.attributes.liability.priority')
+        %th
+          = t('activerecord.attributes.liability.category_id')
+        %th
+          = t('activerecord.attributes.liability.name')
+        %th
+          = t('activerecord.attributes.liability.created_at')
+        %th{ colspan: 2 }
+    %tbody
+      = render @liabilities
+  .text-center
+    = will_paginate @liabilities, renderer: BootstrapPagination::Rails, bootstrap: 3
+- else
+  .alert.alert-info
+    = t('labels.no_results')

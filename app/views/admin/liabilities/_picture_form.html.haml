@@ -1,0 +1,13 @@
+.row
+  .col-xs-2
+    = f.text_field :priority, class: 'form-control', placeholder: t('activerecord.attributes.picture.priority')
+  .col-xs-3
+    = f.text_field :name, class: 'form-control', placeholder: t('activerecord.attributes.picture.name')
+  .col-xs-5
+    %span.btn.btn-file
+      = f.file_field :attachment
+  .col-xs-2
+    = f.link_to_remove class: 'btn btn-danger btn-sm' do
+      %i.glyphicon.glyphicon-trash
+      = t('labels.remove')
+%br

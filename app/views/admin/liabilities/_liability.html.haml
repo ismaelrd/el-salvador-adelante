@@ -1,0 +1,19 @@
+%tr
+  %td
+    = I18n.t((liability.active? == true).to_s)
+  %td
+    = liability.priority
+  %td
+    = liability.category.name rescue ''
+  %td
+    = liability.name
+  %td
+    = liability.created_at.try(:strftime, '%d/%m/%Y')
+  %td
+    = link_to edit_admin_liability_path(liability), class: 'btn btn-primary btn-xs' do
+      %i.glyphicon.glyphicon-edit
+      = t('labels.edit')
+  %td
+    = link_to admin_liability_path(liability), class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: t('labels.confirm_delete') } do
+      %i.glyphicon.glyphicon-trash
+      = t('labels.delete')
