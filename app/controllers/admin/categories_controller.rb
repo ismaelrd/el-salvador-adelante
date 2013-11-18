@@ -19,6 +19,6 @@ class Admin::CategoriesController < Admin::ApplicationController
     helper_method :category
 
     def category_params
-      params.permit(:id, category: [ :name, :description ])
+      params.permit(:id, category: [ :name, :description, :photo, :content ])
     end
 end
