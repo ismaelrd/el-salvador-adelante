@@ -1,11 +1,12 @@
 #left
   #post
     %h1
-      = link_to 'Los cambios deben seguir', nil
+      = link_to @post.name, nil
     %span.date
-      7 de noviembre del 2013
+      = l @post.created_at.to_date, format: :long
     
-    = image_tag 'featured-example.jpg', class: 'header'
+      - if @post.photo.present?
+        = image_tag @post.photo.url(:normal), class: 'header'
     
     .content
       = content_format @post.content, @media

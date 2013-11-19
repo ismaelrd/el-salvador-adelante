@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131115163615) do
+ActiveRecord::Schema.define(version: 20131118223856) do
 
   create_table "articles", force: true do |t|
     t.boolean  "active",             default: true
@@ -69,7 +69,31 @@ ActiveRecord::Schema.define(version: 20131115163615) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "content"
   end
+
+  create_table "liabilities", force: true do |t|
+    t.boolean  "active",             default: true
+    t.integer  "priority",           default: 0
+    t.integer  "category_id"
+    t.string   "name"
+    t.text     "description"
+    t.text     "content"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "liabilities", ["active"], name: "index_liabilities_on_active", using: :btree
+  add_index "liabilities", ["category_id"], name: "index_liabilities_on_category_id", using: :btree
+  add_index "liabilities", ["priority"], name: "index_liabilities_on_priority", using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "ancestry"

@@ -1,11 +1,6 @@
 %h2
   Los compromisos
-= link_to 'Economía', nil, class: 'economy'
-= link_to 'Seguridad', nil, class: 'security'
-= link_to 'Mujeres', nil, class: 'women'
-= link_to 'Agricultura', nil, class: 'agriculture'
-= link_to 'Desarrollo', nil, class: 'development'
-= link_to 'Empleo', nil, class: 'jobs'
-= link_to 'Educación', nil, class: 'education'
-= link_to 'Jóvenes', nil, class: 'young'
-= link_to 'Salud', nil, class: 'health'
+  
+- Config[:categories].keys.each do |category_name|          
+  - category = Category.find Config[:categories][category_name][:id]
+  = link_to category.name, category_url(category), class: category_name
