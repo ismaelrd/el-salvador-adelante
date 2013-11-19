@@ -1,0 +1,22 @@
+= draw_errors(event)
+= nested_form_for [:admin, event], html: { class: 'form-horizontal', role: 'form' } do |f|
+  .form-group
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :description, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :description, class: 'form-control', rows: '3'
+  .form-group
+    = f.label :start_at, class: 'col-sm-2 control-label'
+    .col-sm-3
+      .datepicker.input-group.input-append.date
+        = f.text_field :start_at, value: event.start_at.try(:strftime,'%d/%m/%Y'), 'data-format' => 'dd/MM/yyyy', class: 'form-control'
+        %span.input-group-addon.add-on
+          %i.glyphicon.glyphicon-calendar
+  .form-group
+    .col-sm-offset-2.col-sm-10.text-right
+      = link_to t('labels.back'), admin_events_path, class: 'btn btn-default'
+      = f.submit t('labels.save'), class: 'btn btn-primary'
+= tinymce

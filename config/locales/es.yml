@@ -106,6 +106,7 @@ es:
       article: Noticia
       category: Categoría
       liability: Compromiso
+      event: Evento
     attributes:
       user:
         email: Correo electrónico
@@ -155,6 +156,10 @@ es:
         description: Descripción
         content: Contenido
         category_id: Categoría
+      event:
+        name: Título
+        start_at: Fecha de inicio
+        description: Descripción
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
@@ -162,6 +167,7 @@ es:
       pages: Páginas
       categories: Categorías
       liabilities: Compromisos
+      events: Eventos
   users:
     sessions:
       new:
@@ -227,6 +233,13 @@ es:
         video_gallery: Galería de vídeos
         add_image: Agregar imagen
         add_video: Agregar vídeo
+    events:
+      index:
+        title: Listado de eventos
+      new:
+        title: Eventos <small>Nueva</small>
+      edit:
+        title: Eventos <small>Editar</small>
   layouts:
     admin:
       application:
@@ -277,6 +290,13 @@ es:
         success: Compromiso actualizado exitosamente
       destroy:
         success: Compromiso eliminado exitosamente
+    events:
+      create:
+        success: Evento creado exitosamente
+      update:
+        success: Evento actualizado exitosamente
+      destroy:
+        success: Evento eliminado exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
