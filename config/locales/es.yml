@@ -107,6 +107,8 @@ es:
       category: Categoría
       liability: Compromiso
       event: Evento
+      contact: Contacto
+      sponsor: Patrocinador
     attributes:
       user:
         email: Correo electrónico
@@ -160,6 +162,20 @@ es:
         name: Título
         start_at: Fecha de inicio
         description: Descripción
+      contact:
+        name: Nombre
+        created_at: Fecha
+        email: Correo electrónico
+        phone: Teléfono
+        message: Mensaje
+      sponsor:
+        active: ¿Activo?
+        name: Nombre
+        created_at: Fecha
+        alias: Apodo
+        amount: Monto
+        description: Descripción
+        kind: Tipo
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
@@ -168,6 +184,8 @@ es:
       categories: Categorías
       liabilities: Compromisos
       events: Eventos
+      contacts: Contáctenos
+      sponsors: Patrocinadores
   users:
     sessions:
       new:
@@ -240,6 +258,18 @@ es:
         title: Eventos <small>Nueva</small>
       edit:
         title: Eventos <small>Editar</small>
+    contacts:
+      index:
+        title: Listado de contáctenos
+      show:
+        title: Contáctenos <small>Detalle</small>
+    sponsors:
+      index:
+        title: Listado de patrocinadores
+      new:
+        title: Patrocinadores <small>Nueva</small>
+      edit:
+        title: Patrocinadores <small>Editar</small>
   layouts:
     admin:
       application:
@@ -256,6 +286,7 @@ es:
     back: Regresar
     remove: Remover
     select: '- Seleccione -'
+    see: Ver
   'true': 'Si'
   'false': 'No'
   flash:
@@ -297,6 +328,13 @@ es:
         success: Evento actualizado exitosamente
       destroy:
         success: Evento eliminado exitosamente
+    sponsors:
+      create:
+        success: Patrocinador creado exitosamente
+      update:
+        success: Patrocinador actualizado exitosamente
+      destroy:
+        success: Patrocinador eliminado exitosamente
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
@@ -330,3 +368,10 @@ es:
   will_paginate:
     next_label: Siguiente
     previous_label: Anterior
+  validates:
+    email_invalid: La dirección de correo electrónico no es válida
+  enum:
+    sponsor:
+      kind:
+        anonymous: Anónimo
+        public: Público
