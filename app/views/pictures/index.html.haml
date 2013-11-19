@@ -1,18 +1,18 @@
 - unless @pictures.empty?
-
-  #featured
-    %h1
-      = @pictures.first.name
-    %span
-      = l @pictures.first.created_at.to_date, format: :long
-    %br
-    = image_tag @pictures.first.attachment.url(:normal)
+  -#
+    #featured
+      %h1
+        = @pictures.first.name
+      %span
+        = l @pictures.first.created_at.to_date, format: :long
+      %br
+      = image_tag @pictures.first.attachment.url(:normal)
 
   #list
     - @pictures.each_slice(3).each do |slice|
       - slice.each do |picture|
         .picture
-          = link_to image_tag(picture.attachment.url(:small)), picture.attachment.url(:normal), class: 'fancybox'
+          = link_to image_tag(picture.attachment.url(:small)), picture.attachment.url(:normal), class: 'fancybox', rel: 'gallery', title: picture.name
           .info
             %h2
               = picture.name

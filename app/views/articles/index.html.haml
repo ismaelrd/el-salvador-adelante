@@ -1,0 +1,15 @@
+#left
+  - unless @articles.empty?
+    .list
+      - @articles.each_slice(2).each do |slice|
+        - slice.each do |article|
+          .article{ class: cycle('left', 'right') }
+            %h3
+              = link_to article.name, article_url(article)
+            %span.date
+              = l article.created_at.to_date, format: :long
+            = link_to 'Seguir leyendo', article_url(article), class: 'read-more'
+        .clear
+
+#right  
+  = render partial: '/posts/right_bar'

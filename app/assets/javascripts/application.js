@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require fancybox
 //= require_tree .
 
 jQuery(function() {
-  $("a.fancybox").fancybox();
+  $("a.fancybox").fancybox({
+  	titlePosition: "inside"
+  });
 });

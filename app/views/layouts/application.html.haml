@@ -14,7 +14,7 @@
           - @pages.each do |page|
             %li
               = link_to page.name, page_url(page)
-          %li= link_to 'Noticias', nil
+          %li= link_to 'Noticias', articles_path
           %li= link_to 'Fotos', pictures_url
           %li= link_to 'Videos', videos_url
         #social-menu
