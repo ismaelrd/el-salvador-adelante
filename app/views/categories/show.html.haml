@@ -16,7 +16,7 @@
           .panel-heading
             %h4.panel-title
               = link_to liability.name, "#liability#{liability.id}", 'data-toggle' => 'collapse', 'data-parent' => '#accordion'
-          .panel-collapse.collapse.in{ id: "liability#{liability.id}"}
+          .panel-collapse.collapse{ id: "liability#{liability.id}"}
             .panel-body
               = raw liability.content
   %hr
