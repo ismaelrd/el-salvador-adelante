@@ -1,0 +1,28 @@
+categories:
+  economy:
+    id: 1
+    name: Economía
+  security:
+    id: 2
+    name: Seguridad
+  women:
+    id: 3
+    name: Mujeres
+  agriculture:
+    id: 4
+    name: Agricultura
+  development:
+    id: 5
+    name: Desarrollo
+  employment:
+    id: 6
+    name: Empleo
+  education:
+    id: 7
+    name: Educación
+  young:
+    id: 8
+    name: Jóvenes
+  health:
+    id: 9
+    name: Salud

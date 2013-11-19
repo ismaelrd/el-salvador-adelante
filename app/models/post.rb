@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
 
   ## validations
   validates :name, :content, presence: true
+  validates :priority, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates_attachment :photo,
     content_type: { content_type: /^image\/(png|gif|jpeg|jpg)/ }
 
