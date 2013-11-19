@@ -9,6 +9,16 @@
   .content
     = raw @category.content
 
+  - unless @category.liabilities.empty?
+    #accordion.panel-group
+      .panel.panel-default
+        - @category.liabilities.each do |liability|
+          .panel-heading
+            %h4.panel-title
+              = link_to liability.name, "#liability#{liability.id}", 'data-toggle' => 'collapse', 'data-parent' => '#accordion'
+          .panel-collapse.collapse.in{ id: "liability#{liability.id}"}
+            .panel-body
+              = raw liability.content
   %hr
 
   .share

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131118235828) do
+ActiveRecord::Schema.define(version: 20131119023624) do
 
   create_table "articles", force: true do |t|
     t.boolean  "active",             default: true
@@ -74,6 +74,15 @@ ActiveRecord::Schema.define(version: 20131118235828) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.text     "content"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "email"
+    t.string   "phone"
+    t.string   "name"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "events", force: true do |t|
@@ -159,10 +168,12 @@ ActiveRecord::Schema.define(version: 20131118235828) do
     t.string   "name"
     t.string   "document_type"
     t.string   "document"
-    t.float    "amount"
+    t.float    "amount",        default: 0.0
     t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.boolean  "active",        default: false
   end
 
   add_index "sponsors", ["kind"], name: "index_sponsors_on_kind", using: :btree
