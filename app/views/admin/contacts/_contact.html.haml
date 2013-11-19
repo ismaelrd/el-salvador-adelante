@@ -1,6 +1,6 @@
 %tr
   %td
-    = contact.created_at.try(:strftime, '%d/%m/%Y')
+    = contact.created_at.try(:strftime, '%d/%m/%Y %I:%M %P')
   %td
     = contact.name
   %td

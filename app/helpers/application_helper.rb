@@ -82,4 +82,12 @@ module ApplicationHelper
     raw content
   end
 
+  def draw_success
+    if flash[:notice]
+      content_tag(:div, class: "alert alert-success") do
+        concat flash[:notice]
+      end
+    end
+  end
+
 end
