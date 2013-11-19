@@ -176,12 +176,17 @@ b {
   
   img {
     display: block;
+    width: 685px;
   }
   
   h2 {
     font-size: 27px;
     font-weight: bold;
     margin-bottom: 8px;
+    
+    a {
+      color: #fff;
+    }
   }
   
   .caption {
