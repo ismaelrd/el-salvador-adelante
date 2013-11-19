@@ -33,6 +33,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    bootstrap-datetimepicker-rails (0.0.11)
     builder (3.1.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -161,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry (~> 2.0.0)
   anjlab-bootstrap-rails (~> 3.0.0.3)
+  bootstrap-datetimepicker-rails (~> 0.0.11)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.0)
   fancybox-rails (~> 0.2.1)

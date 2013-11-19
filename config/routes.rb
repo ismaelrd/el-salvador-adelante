@@ -56,6 +56,7 @@ Adelante::Application.routes.draw do
     resources :pages, except: [:show]
     resources :categories, only: [:index, :edit, :update]
     resources :liabilities, except: [:show]
+    resources :events, except: [:show]
   end
 
 
