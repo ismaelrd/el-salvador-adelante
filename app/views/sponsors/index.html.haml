@@ -4,54 +4,30 @@
       Personas que
     Apoyan los cambios
 
-  %table
-    %thead
-      %tr
-        %th
-          Nombre
-        %th
-          Donación
-    %tbody
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-      %tr
-        %td
-          Juan Galdamez
-        %td
-          $1000.00
-    %tfoot
-      %tr
-        %td
-          Total
-        %td
-          $1000.00
+  - if sponsors.any?
+    %table
+      %thead
+        %tr
+          %th
+            Nombre
+          %th
+            Donación
+      %tbody
+        - sponsors.each do |sponsor|
+          %tr
+            %td
+              = sponsor.visible_name
+            %td
+              = sponsor.amount.zero? ? sponsor.description : number_to_currency(sponsor.amount)
+      %tfoot
+        %tr
+          %td
+            Total
+          %td
+            = number_to_currency(sponsors.map(&:amount).inject(:+))
+  - else  
+    %br
+    %h3
+      No existen patrocinadores
 #right
   = render partial: 'right_bar'

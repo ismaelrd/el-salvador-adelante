@@ -1,3 +1,29 @@
 %h2
-  Apoya tu también
-= link_to 'Hacer donación', nil, class: 'btn'
+  Apoya tú también
+  %span
+    Complete el formulario para donar
+%br
+= draw_errors(contact)
+= draw_success
+= form_for contact, url: sponsors_path,  html: { role: 'form', method: :post } do |f|
+  %label{ for: 'contact_email' }
+    Correo electrónico
+    %span
+      Es obligatorio
+  = f.text_field :email
+  %label{ for: 'contact_name' }
+    Nombre
+    %span
+      Es obligatorio
+  = f.text_field :name
+  %label{ for: 'contact_phone' }
+    Teléfono
+    %span
+      No es obligatorio
+  = f.text_field :phone
+  %label{ for: 'contact_message' }
+    Mensaje
+    %span
+      Es obligatorio
+  = f.text_area :message, rows: 3
+  = f.submit 'Hacer donación', class: 'btn'
