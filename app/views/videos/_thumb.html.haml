@@ -1,5 +1,5 @@
 - unless video.nil?
   .thumb.video{ class: align }
-    = link_to video_url(video), class: 'fancybox' do
+    = link_to video_url(video), class: 'fancybox', title: video.name do
       = image_tag 'icon-youtube-play.png', class: 'play'
       = image_tag video.youtube_thumb(:large)
