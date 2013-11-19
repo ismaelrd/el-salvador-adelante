@@ -1,82 +1,50 @@
 #left
-  #featured  
-    %h1
-      = link_to 'Los cambios deben seguir', nil
-    %span.date
-      7 de noviembre del 2013
-    
-    = image_tag 'featured-example.jpg'
-    
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-      Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget,
-      consectetur non tellus. Praesent vulputate risus eu nisl ornare facilisis. Integer ac justo et mi semper volutpat et ac justo.
-      Pellentesque ac elementum tellus. Praesent suscipit commodo neque quis faucibus. Ut et magna egestas, malesuada elit a,
-      tincidunt diam. Etiam id euismod felis. Integer imperdiet libero ipsum, quis gravida odio consequat sit amet.
-
-    = link_to 'Seguir leyendo', nil, class: 'read-more'
-
-  %div
-    .post.left.bordered
-      %h3
-        = link_to 'Los cambios deben seguir', nil
+  - unless @featured_post.nil?
+    #featured  
+      %h1
+        = link_to @featured_post.name, post_url(@featured_post)
       %span.date
-        7 de noviembre del 2013
+        = l @featured_post.created_at.to_date, format: :long
+      - if @featured_post.photo.present?
+        = image_tag @featured_post.photo.url(:normal)
       %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-        Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .post.right
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-        Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .clear
+        = @featured_post.description
+      = link_to 'Seguir leyendo', post_url(@featured_post), class: 'read-more'
 
-  .list
-    .post.left
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .post.right
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .clear
-    .post.left
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .post.right
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .clear
-    .post.left
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .post.right
-      %h3
-        = link_to 'Los cambios deben seguir', nil
-      %span.date
-        7 de noviembre del 2013
-      = link_to 'Seguir leyendo', nil, class: 'read-more'
-    .clear
+  - unless @posts.empty?
+    - @posts = @posts.to_a
+    %div
+      - post = @posts.shift
+      .post.left.bordered
+        %h3
+          = link_to post.name, post_url(post)
+        %span.date
+          = l post.created_at.to_date, format: :long
+        %p
+          = post.description
+        = link_to 'Seguir leyendo', post_url(post), class: 'read-more'
+      - unless @posts.empty?
+        - post = @posts.shift
+        .post.right
+          %h3
+            = link_to post.name, post_url(post)
+          %span.date
+            = l post.created_at.to_date, format: :long
+          %p
+            = post.description
+          = link_to 'Seguir leyendo', post_url(post), class: 'read-more'
+      .clear
+  - unless @posts.empty?
+    .list
+      - @posts.each_slice(2).each do |slice|
+        - slice.each do |post|
+          .post{ class: cycle('left', 'right') }
+            %h3
+              = link_to post.name, post_url(post)
+            %span.date
+              = l post.created_at.to_date, format: :long
+            = link_to 'Seguir leyendo', post_url(post), class: 'read-more'
+        .clear
 
 #right  
   = render partial: 'right_bar'
