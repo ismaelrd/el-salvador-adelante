@@ -1,0 +1,13 @@
+%tr
+  %td
+    = contact.created_at.try(:strftime, '%d/%m/%Y')
+  %td
+    = contact.name
+  %td
+    = contact.email
+  %td
+    = contact.phone || '-'
+  %td
+    = link_to admin_contact_path(contact), class: 'btn btn-primary btn-xs' do
+      %i.glyphicon.glyphicon-eye-open
+      = t('labels.see')
