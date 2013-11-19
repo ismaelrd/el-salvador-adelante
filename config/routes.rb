@@ -66,4 +66,5 @@ Adelante::Application.routes.draw do
   resources :pictures
   resources :videos
   resources :sponsors
+  resources :pages
 end
