@@ -9,33 +9,18 @@
   = link_to image_tag('icon-jobs-small.jpg'), nil
   = link_to image_tag('icon-education-small.jpg'), nil
 
-#last-posts
-  %h2
-    Últimos posts
-  %div
-    %span.date
-      7 de noviembre
-    %h3
-      = link_to '142 mil salvadoreños han sido alfabetizados', nil
-    = link_to 'Seguir leyendo', nil, class: 'read-more'
-  %div
-    %span.date
-      7 de noviembre
-    %h3
-      = link_to '142 mil salvadoreños han sido alfabetizados', nil
-    = link_to 'Seguir leyendo', nil, class: 'read-more'
-  %div
-    %span.date
-      7 de noviembre
-    %h3
-      = link_to '142 mil salvadoreños han sido alfabetizados', nil
-    = link_to 'Seguir leyendo', nil, class: 'read-more'
-  %div
-    %span.date
-      7 de noviembre
-    %h3
-      = link_to '142 mil salvadoreños han sido alfabetizados', nil
-    = link_to 'Seguir leyendo', nil, class: 'read-more'
+- unless @last_posts.empty?
+  #last-posts
+    %h2
+      Últimos posts
+    - @last_posts.each do |post|
+      %div
+        %span.date
+          = l post.created_at.to_date, format: :long
+        %h3
+          = link_to post.name, post_url(post)
+        = link_to 'Seguir leyendo', post_url(post), class: 'read-more'
+
 #donate
   = link_to nil, class: 'btn' do
     %b
