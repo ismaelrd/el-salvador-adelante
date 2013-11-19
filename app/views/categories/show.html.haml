@@ -1,23 +1,13 @@
 #left
   = render partial: 'left_bar'
 #right
-  = image_tag 'liability-header-example.jpg'
+  - if @category.photo.present?
+    = image_tag @category.photo.url(:normal), class: 'header'
 
   %h1
-    Economía
+    = @category.name
   .content
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-      Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget,
-      consectetur non tellus. Praesent vulputate risus eu nisl ornare facilisis. Integer ac justo et mi semper volutpat et ac justo.
-      Pellentesque ac elementum tellus. Praesent suscipit commodo neque quis faucibus. Ut et magna egestas, malesuada elit a,
-      tincidunt diam. Etiam id euismod felis. Integer imperdiet libero ipsum, quis gravida odio consequat sit amet.
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a facilisis sapien, quis venenatis nunc.
-      Donec lacinia adipiscing massa. Sed interdum auctor tellus eget tincidunt. In eros eros, faucibus vitae commodo eget,
-      consectetur non tellus. Praesent vulputate risus eu nisl ornare facilisis. Integer ac justo et mi semper volutpat et ac justo.
-      Pellentesque ac elementum tellus. Praesent suscipit commodo neque quis faucibus. Ut et magna egestas, malesuada elit a,
-      tincidunt diam. Etiam id euismod felis. Integer imperdiet libero ipsum, quis gravida odio consequat sit amet.
+    = raw @category.content
 
   %hr
 

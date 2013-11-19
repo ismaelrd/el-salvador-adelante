@@ -1,13 +1,11 @@
 #liabilities
   %h2
     Los compromisos
-  = link_to image_tag('icon-economy-small.jpg'), nil
-  = link_to image_tag('icon-security-small.jpg'), nil
-  = link_to image_tag('icon-women-small.jpg'), nil
-  = link_to image_tag('icon-agriculture-small.jpg'), nil
-  = link_to image_tag('icon-development-small.jpg'), nil
-  = link_to image_tag('icon-jobs-small.jpg'), nil
-  = link_to image_tag('icon-education-small.jpg'), nil
+
+  - Config[:categories].keys.each do |category_name|          
+    - category = Category.find Config[:categories][category_name][:id]
+    = link_to image_tag("icon-#{category_name}-small.jpg"), category_url(category)
+    - break if category_name == 'education'
 
 - unless @last_posts.empty?
   #last-posts
