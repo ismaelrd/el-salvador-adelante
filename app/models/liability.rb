@@ -1,16 +1,15 @@
-class Page < ActiveRecord::Base
-  ## ancestry
-  has_ancestry cache_depth: true
-
-  ## constants
-  KIND = %w(page)
+class Liability < ActiveRecord::Base
+  ## paperclip
+  has_attached_file :photo, styles: { small: '200', normal: '640' }
 
   ## validations
-  validates :name, presence: true, length: { maximum: 200 }
+  validates :name, :content, :category_id, presence: true
   validates :priority, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :kind, inclusion: { in: KIND }
+  validates_attachment :photo,
+    content_type: { content_type: /^image\/(png|gif|jpeg|jpg)/ }
 
   ## associations
+  belongs_to :category
   has_many :pictures, as: :assetable, class_name: Asset::Picture, dependent: :destroy
   has_many :videos, as: :assetable, class_name: Asset::Video, dependent: :destroy
   has_many :documents, as: :assetable, class_name: Asset::Document, dependent: :destroy
