@@ -4,9 +4,13 @@
 
 #= require jquery
 #= require jquery_ujs
-#= require turbolinks
 #= require_tree .
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/dropdown
 #= require tinymce-jquery
 #= require jquery_nested_form
+#= require bootstrap-datetimepicker
+#= require locales/bootstrap-datetimepicker.es.js
+
+$(document).ready ->
+  datepicker = $(".datepicker").datetimepicker(language: 'es', pickTime: false, weekStart: 1)

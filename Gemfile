@@ -80,3 +80,6 @@ gem 'nested_form', '~> 0.3.2'
 
 # Use FancyBox with Rails
 gem 'fancybox-rails', '~> 0.2.1'
+
+# A Datepicker for Twitter Bootstrap, integrated with Rails assets pipeline
+gem 'bootstrap-datetimepicker-rails', '~> 0.0.11'
