@@ -4,5 +4,6 @@ class Asset::Picture < Asset
 
   ## validations
   validates_attachment :attachment,
+    presence: true,
     content_type: { content_type: /^image\/(png|gif|jpeg|jpg)/ }
 end
