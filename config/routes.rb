@@ -57,6 +57,8 @@ Adelante::Application.routes.draw do
     resources :categories, only: [:index, :edit, :update]
     resources :liabilities, except: [:show]
     resources :events, except: [:show]
+    resources :contacts, only: [:index, :show]
+    resources :sponsors, except: [:show]
   end
 
 

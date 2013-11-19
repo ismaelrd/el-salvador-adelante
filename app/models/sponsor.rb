@@ -1,11 +1,15 @@
 class Sponsor < ActiveRecord::Base
   ## constants
-  KIND = %w(anonymous public)
+  KIND = {
+    'anonymous' => I18n.t('enum.sponsor.kind.anonymous'),
+    'public' => I18n.t('enum.sponsor.kind.public')
+  }
 
   ## validations
-  validates :alias, :name, :document_type, :document, length: { maximum: 200 }
-  validates :name, :document, presence: true
-  validates :amount, numericality: { greater_than_or_equal_to: 5 }
-  validates :kind, inclusion: { in: KIND }
-
+  validates :name, presence: true
+  validates :alias, :name, length: { maximum: 200 }
+  validates :amount, numericality: { greater_than_or_equal_to: 0 }
+  validates :kind, presence: true, inclusion: { in: KIND.keys }
+  validates :alias, presence: true, if: Proc.new{ |o| o.kind == 'anonymous' }
+  validates :description, presence: true, if: Proc.new{ |o| o.amount.zero? }
 end

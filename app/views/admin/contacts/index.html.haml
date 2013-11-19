@@ -1,0 +1,24 @@
+.page-header
+  %h1
+    = t('.title')
+
+- if @contacts.any?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th
+          = t('activerecord.attributes.contact.created_at')
+        %th
+          = t('activerecord.attributes.contact.name')
+        %th
+          = t('activerecord.attributes.contact.email')
+        %th
+          = t('activerecord.attributes.contact.phone')
+        %th
+    %tbody
+      = render @contacts
+  .text-center
+    = will_paginate @contacts, renderer: BootstrapPagination::Rails, bootstrap: 3
+- else
+  .alert.alert-info
+    = t('labels.no_results')
