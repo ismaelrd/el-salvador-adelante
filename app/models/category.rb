@@ -1,6 +1,9 @@
 class Category < ActiveRecord::Base
   ## paperclip
   has_attached_file :photo, styles: { small: '200', normal: '640' }
+  
+  ## associations
+  has_many :liabilities
 
   # validations
   validates :name, presence: true, length: { maximum: 200 }
