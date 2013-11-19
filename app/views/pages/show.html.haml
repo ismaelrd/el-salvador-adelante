@@ -1,0 +1,9 @@
+#left
+  #post
+    %h1
+      = link_to @page.name, nil
+
+    .content
+      = content_format @page.content, @media
+#right  
+  = render partial: '/posts/right_bar'
