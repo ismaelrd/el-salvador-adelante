@@ -2,6 +2,8 @@
   %td
     = I18n.t((sponsor.active? == true).to_s)
   %td
+    = sponsor.priority
+  %td
     = Sponsor::KIND[sponsor.kind]
   %td
     = sponsor.name

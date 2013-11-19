@@ -32,6 +32,6 @@ class Admin::SponsorsController < Admin::ApplicationController
     helper_method :sponsor
 
     def sponsor_params
-      params.permit(:id, sponsor: [ :active, :kind, :name, :alias, :amount, :description ])
+      params.permit(:id, sponsor: [ :active, :kind, :name, :alias, :amount, :description, :priority ])
     end
 end

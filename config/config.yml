@@ -26,3 +26,13 @@ categories:
   health:
     id: 9
     name: Salud
+action_mailer:
+  delivery_method: 'smtp'
+  smtp_settings:
+    address: 'smtp.gmail.com'
+    port: 587
+    domain: 'gobiernoabierto.gob.sv'
+    authentication: 'plain'
+    enable_starttls_auto: true
+    user_name: 'info@gobiernoabierto.gob.sv'
+    password: 'ncgP@CCH'

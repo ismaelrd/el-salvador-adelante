@@ -176,6 +176,7 @@ es:
         amount: Monto
         description: Descripción
         kind: Tipo
+        priority: Prioridad
     controllers:
       dashboard: Dashboard
       posts: Publicaciones
@@ -369,7 +370,7 @@ es:
     next_label: Siguiente
     previous_label: Anterior
   validates:
-    email_invalid: La dirección de correo electrónico no es válida
+    email_invalid: no es válida
   enum:
     sponsor:
       kind:
