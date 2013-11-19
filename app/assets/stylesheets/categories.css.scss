@@ -49,8 +49,8 @@ hr {
       background-image: image-url('icon-agriculture-medium.jpg');
     }
 
-    &.jobs {
-      background-image: image-url('icon-jobs-medium.jpg');
+    &.employment {
+      background-image: image-url('icon-employment-medium.jpg');
     }
 
     &.development {
@@ -77,6 +77,10 @@ hr {
 
   h1 {
     padding: 20px 0 10px 0;
+  }
+  
+  .header {
+    width: 696px;
   }
 
   .content {

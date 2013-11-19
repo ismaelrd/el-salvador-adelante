@@ -17,5 +17,6 @@ class ApplicationController < ActionController::Base
   def init_posts
     @featured_post = Post.where(featured: true).order(priority: :asc, created_at: :desc).first
     @last_posts = Post.order(priority: :asc, created_at: :desc).limit(4)
+    @pages = Page.order(priority: :asc)
   end
 end
