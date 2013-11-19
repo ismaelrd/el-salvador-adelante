@@ -13,7 +13,7 @@
           - @pages.each do |page|
             %li
               = link_to page.name, page_url(page)
-          %li= link_to 'Noticias', nil
+          %li= link_to 'Noticias', articles_path
           %li= link_to 'Fotos', pictures_url
           %li= link_to 'Videos', videos_url
         #social-menu
@@ -28,7 +28,7 @@
           %b
             El Salvador debe seguir cambiando
         #donate
-          = link_to nil, class: 'btn orange' do
+          = link_to sponsors_url, class: 'btn orange' do
             %b
               Apoyanos
             con una donación
@@ -37,7 +37,7 @@
               100
             personas apoyando
             %br
-            = link_to 'ver quienes son', nil, class: 'text-link'
+            = link_to 'ver quienes son', sponsors_url, class: 'text-link'
         .clear
       #posts
         - unless @featured_post.nil?
@@ -65,9 +65,9 @@
           .title.blue
             En twitter
           #last-tweet
-            = link_to '@ESAdelante', nil
+            = link_to '@ESAdelante', 'http://twitter.com/ESAdelante', target: '_blank'
             \:
-            Comité con empresarios socialmente responsables, previo a la conferencia de prensa
+            = raw @tweet.text
         .clear
       #liabilities
         %h2
@@ -89,32 +89,23 @@
         #news
           %h2
             Noticias
-          %div
-            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
-            %h3
-              = link_to 'Salvador recibe proclama y la llave de Watsonville en Estados Unidos', nil
-            = link_to 'Seguir leyendo', nil, class: 'read-more'
-            .clear
-          %div
-            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
-            %h3
-              = link_to 'Salvador Sánchez Cerén: Una nueva relación de independencia y soberanía empieza a hacerse realidad en Latinoamérica', nil
-            = link_to 'Seguir leyendo', nil, class: 'read-more'
-            .clear
-          %div
-            = link_to image_tag('thumbnail-new-example.jpg'), nil, class: 'pic'
-            %h3
-              = link_to 'Salvador recibe proclama y la llave de Watsonville en Estados Unidos', nil
-            = link_to 'Seguir leyendo', nil, class: 'read-more'
-            .clear
+          - unless @last_articles.empty?
+            - @last_articles.each do |article|
+              %div
+                - if article.photo.present?
+                  = link_to image_tag(article.photo.url(:small)), article_path(article), class: 'pic'
+                %h3
+                  = link_to article.name, article_path(article)
+                = link_to 'Seguir leyendo', article_path(article), class: 'read-more'
+                .clear
         #media
           #join-us
             Únete y apóyanos
-            = link_to 'Ver cómo', nil, class: 'btn'
+            = link_to 'Ver cómo', sponsors_url, class: 'btn'
           #gallery
             %h2
               Galería multimedia
-            = link_to image_tag('gallery-example.jpg'), nil
+            = link_to image_tag('gallery-example.jpg'), pictures_url
         .clear
       #bottom
         #social
@@ -129,26 +120,26 @@
         #what-do-you-want
           ¿Qué país querés?
         .clear
-        #events
-          %h2
-            Agenda de eventos
-          %div
-            %h3
-              = link_to '28 de Noviembre', nil
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur urna elit, dignissim vel ornare vel, fringilla eget neque. Sed id pulvinar enim. Fusce id ornare elit, sit amet accumsan ipsum.
-            = link_to 'Seguir leyendo', nil, class: 'read-more'
-          %div
-            %h3
-              = link_to '28 de Noviembre', nil
-            %p
-              Nam in ornare justo, nec rhoncus massa. Sed at augue ac diam mollis adipiscing. Nulla facilisi. Curabitur rhoncus elit leo, sit amet tristique metus porta id. Sed eget cursus ante, ac pretium nibh.
-            = link_to 'Seguir leyendo', nil, class: 'read-more'
-          .clear
+        - unless @events.empty?
+          #events
+            %h2
+              Agenda de eventos
+          
+            - @events.each do |event|
+              %div
+                %h3
+                  =# link_to '28 de Noviembre', nil
+                  =# event.name
+                  = l event.start_at, format: :short
+                %p
+                  = raw event.description.gsub("\n", '<br />')
+                =# link_to 'Seguir leyendo', nil, class: 'read-more'
+            .clear
         #bottom-banner
           = image_tag('bottom-banner-example.jpg')
-          %p
-            Comparte en redes sociales la imágenes de #SVAdelante que más te representan
+          -#
+            %p
+              Comparte en redes sociales la imágenes de #SVAdelante que más te representan
         .clear
       #footer
         #address
