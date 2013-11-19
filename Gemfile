@@ -83,3 +83,6 @@ gem 'fancybox-rails', '~> 0.2.1'
 
 # A Datepicker for Twitter Bootstrap, integrated with Rails assets pipeline
 gem 'bootstrap-datetimepicker-rails', '~> 0.0.11'
+
+# A Ruby interface to the Twitter API
+gem 'twitter', '~> 4.8.1'

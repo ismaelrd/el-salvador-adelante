@@ -1,18 +1,19 @@
 - unless @videos.empty?
 
-  #featured
-    %h1
-      = @videos.first.name
-    %span
-      = l @videos.first.created_at.to_date, format: :long
-    %br
-    = link_to image_tag(@videos.first.youtube_thumb(:normal)), video_url(@videos.first), class: 'fancybox'
+  -#
+    #featured
+      %h1
+        = @videos.first.name
+      %span
+        = l @videos.first.created_at.to_date, format: :long
+      %br
+      = link_to image_tag(@videos.first.youtube_thumb(:normal)), video_url(@videos.first), class: 'fancybox'
 
   #list
     - @videos.each_slice(3).each do |slice|
       - slice.each do |video|
         .picture
-          = link_to image_tag(video.youtube_thumb(:normal)), video_url(video), class: 'fancybox'
+          = link_to image_tag(video.youtube_thumb(:normal)), video_url(video), class: 'fancybox', title: video.name
           .info
             %h2
               = video.name

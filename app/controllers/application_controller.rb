@@ -17,6 +17,9 @@ class ApplicationController < ActionController::Base
   def init_posts
     @featured_post = Post.where(featured: true).order(priority: :asc, created_at: :desc).first
     @last_posts = Post.order(priority: :asc, created_at: :desc).limit(4)
+    @last_articles = Article.order(created_at: :desc).limit(3)
     @pages = Page.order(priority: :asc)
+    @events = Event.order(start_at: :desc).limit(2)
+    @tweet = Twitter.user_timeline("ESAdelante").first
   end
 end

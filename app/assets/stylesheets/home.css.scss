@@ -378,6 +378,8 @@ b {
   
   .pic {
     float: left;
+    height: 132px;
+    overflow: hidden;
     width: 190px;
   }
 
@@ -504,11 +506,10 @@ b {
   }
   
   p {
-    height: 86px;
+    height: 102px;
     line-height: 17px;
     margin-bottom: 10px;
     overflow: hidden;
-    text-align: justify;
   }
   
   a.read-more {
@@ -522,7 +523,7 @@ b {
   border-top: 3px #578f50 solid;
   color: #fff;
   float: left;
-  padding: 14px;
+  padding: 43px 14px 42px 14px;
   width: 430px;
   
   p {

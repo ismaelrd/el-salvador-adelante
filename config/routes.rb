@@ -70,4 +70,5 @@ Adelante::Application.routes.draw do
   resources :videos
   resources :sponsors
   resources :pages
+  resources :articles
 end
