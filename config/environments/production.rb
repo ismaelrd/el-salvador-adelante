@@ -61,6 +61,9 @@ Adelante::Application.configure do
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   config.assets.precompile += %w(articles.css categories.css home.css pages.css pictures.css posts.css sponsors.css videos.css)
   config.assets.precompile += %w(categories.js)
+  
+  config.assets.precompile += %w(admin/application.css)
+  config.assets.precompile += %w(admin/application.js)
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
