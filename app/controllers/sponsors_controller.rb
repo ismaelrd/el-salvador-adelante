@@ -1,6 +1,7 @@
 class SponsorsController < ApplicationController
 
   def index
+    set_meta_tags title: 'Apoyanos, mira quienes ya nos están ayudando', site: 'El Salvador Adelante', reverse: true
   end
 
   def create
