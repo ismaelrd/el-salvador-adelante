@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119035916) do
+ActiveRecord::Schema.define(version: 20131212172437) do
 
   create_table "articles", force: true do |t|
     t.boolean  "active",             default: true
@@ -89,6 +89,12 @@ ActiveRecord::Schema.define(version: 20131119035916) do
     t.string   "name"
     t.text     "description"
     t.date     "start_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "home_videos", force: true do |t|
+    t.string   "url",        default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,7 @@
+%tr
+  %td
+    = home_video.url
+  %td
+    = link_to edit_admin_home_video_path(home_video), class: 'btn btn-primary btn-xs' do
+      %i.glyphicon.glyphicon-edit
+      = t('labels.edit')

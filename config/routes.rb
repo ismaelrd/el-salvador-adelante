@@ -59,6 +59,7 @@ Adelante::Application.routes.draw do
     resources :events, except: [:show]
     resources :contacts, only: [:index, :show]
     resources :sponsors, except: [:show]
+    resources :home_videos, except: [:show]
   end
 
 

@@ -105,7 +105,8 @@
           #gallery
             %h2
               Galería multimedia
-            = link_to image_tag('gallery-example.jpg'), pictures_url
+            %iframe{ width: 446, height: 286, src: "//www.youtube.com/embed/#{@home_video.youtube_id}?autoplay=1", frameborder: 0, allowfullscreen: true }
+            =# link_to image_tag('gallery-example.jpg'), pictures_url
         .clear
       #bottom
         #social
@@ -132,6 +133,10 @@
                   =# event.name
                   = l event.start_at, format: :short
                 %p
+                  %b
+                    = event.name
+                  %br
+                  %br
                   = raw event.description.gsub("\n", '<br />')
                 =# link_to 'Seguir leyendo', nil, class: 'read-more'
             .clear

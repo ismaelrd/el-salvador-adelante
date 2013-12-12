@@ -1,6 +1,6 @@
 class Liability < ActiveRecord::Base
   ## paperclip
-  has_attached_file :photo, styles: { small: '200', normal: '640' }
+  has_attached_file :photo, styles: { small: '200', normal: '664' }
 
   ## validations
   validates :name, :content, :category_id, presence: true

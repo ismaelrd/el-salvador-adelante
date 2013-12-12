@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
+    @home_video = HomeVideo.first
     set_meta_tags title: 'El Salvador Adelante'
     render layout: false
   end

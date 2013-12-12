@@ -4,8 +4,18 @@
   - if @category.photo.present?
     = image_tag @category.photo.url(:normal), class: 'header'
 
+  .share
+    %h3
+      Compartir
+    = link_to image_tag('icon-facebook-large.jpg'), nil
+    = link_to image_tag('icon-twitter-large.jpg'), nil
+    = link_to image_tag('icon-gplus-large.jpg'), nil
+
   %h1
     = @category.name
+
+  .clear
+
   .content
     = raw @category.content
 
@@ -18,12 +28,6 @@
               = link_to liability.name, "#liability#{liability.id}", 'data-toggle' => 'collapse', 'data-parent' => '#accordion'
           .panel-collapse.collapse{ id: "liability#{liability.id}"}
             .panel-body
+              - if liability.photo.present?
+                = image_tag liability.photo.url(:normal), class: 'liability-header-pic'
               = raw liability.content
-  %hr
-
-  .share
-    %h3
-      Si te gustó, compartelo
-    = link_to image_tag('icon-facebook-large.jpg'), nil
-    = link_to image_tag('icon-twitter-large.jpg'), nil
-    = link_to image_tag('icon-gplus-large.jpg'), nil

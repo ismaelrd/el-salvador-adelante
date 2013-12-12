@@ -1,0 +1,10 @@
+= draw_errors(home_video)
+= nested_form_for [:admin, home_video], html: { class: 'form-horizontal', role: 'form' } do |f|
+  .form-group
+    = f.label :url, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :url, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10.text-right
+      = link_to t('labels.back'), admin_home_videos_path, class: 'btn btn-default'
+      = f.submit t('labels.save'), class: 'btn btn-primary'
