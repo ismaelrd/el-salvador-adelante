@@ -105,11 +105,12 @@
             %br
             únete y apóyanos
             = link_to 'Ver cómo', sponsors_url, class: 'btn'
-          #gallery
-            %h2
-              Galería multimedia
-            %iframe{ width: 446, height: 286, src: "//www.youtube.com/embed/#{@home_video.youtube_id}", frameborder: 0, allowfullscreen: true }
-            =# link_to image_tag('gallery-example.jpg'), pictures_url
+          - unless @home_video.nil?
+            #gallery
+              %h2
+                Galería multimedia
+              %iframe{ width: 446, height: 286, src: "//www.youtube.com/embed/#{@home_video.youtube_id}", frameborder: 0, allowfullscreen: true }
+              =# link_to image_tag('gallery-example.jpg'), pictures_url
         .clear
       #bottom
         #social
