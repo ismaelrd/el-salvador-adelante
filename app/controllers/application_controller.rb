@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
     @last_articles = Article.order(created_at: :desc).limit(3)
     @pages = Page.order(priority: :asc)
     @events = Event.order(start_at: :desc).limit(2)
-    @tweet = Twitter.user_timeline("ESAdelante").first
+    begin
+      @tweet = Twitter.user_timeline("ESAdelante").first
+    rescue
+      @tweet = nil
+    end
   end
 end

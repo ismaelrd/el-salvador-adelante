@@ -18,27 +18,30 @@
           %li= link_to 'Fotos', pictures_url
           %li= link_to 'Videos', videos_url
         #social-menu
-          = link_to image_tag('icon-facebook.jpg'), nil
-          = link_to image_tag('icon-twitter.jpg'), nil
-          = link_to image_tag('icon-gplus.jpg'), nil
+          = link_to image_tag('icon-facebook.jpg'), 'https://www.facebook.com/ESAdelante', target: '_blank'
+          = link_to image_tag('icon-twitter.jpg'), 'https://twitter.com/ESAdelante', target: '_blank'
+          =# link_to image_tag('icon-gplus.jpg'), nil
         .clear
       #breadcrumb
-        = link_to 'Inicio', nil
-        >
-        = link_to 'Noticias', nil
-        >
-        %b
-          Los cambios deben seguir
+        -#
+          = link_to 'Inicio', nil
+          >
+          = link_to 'Noticias', nil
+          >
+          %b
+            Los cambios deben seguir
       #content
         = yield
         .clear
       #footer
         #address
-          Av. uno y calle dos, San Salvador
+          Boulevard Los Heroes y 23 Calle
           %br
-          Tel. +503 2223-4789
+          Poniente No. 1245, San Salvador.
+          %br 
+          Tel 2556-3713
           %br
-          = link_to 'Contáctenos', nil
+          = link_to 'movimientociudadanoesadelante@gmail.com', 'mailto:movimientociudadanoesadelante@gmail.com'
         = image_tag 'footer-text.jpg'
         .clear
       #copyright

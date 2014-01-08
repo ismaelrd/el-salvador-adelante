@@ -17,9 +17,9 @@
           %li= link_to 'Fotos', pictures_url
           %li= link_to 'Videos', videos_url
         #social-menu
-          = link_to image_tag('icon-facebook.jpg'), nil
-          = link_to image_tag('icon-twitter.jpg'), nil
-          = link_to image_tag('icon-gplus.jpg'), nil
+          = link_to image_tag('icon-facebook.jpg'), 'https://www.facebook.com/ESAdelante', target: '_blank'
+          = link_to image_tag('icon-twitter.jpg'), 'https://twitter.com/ESAdelante', target: '_blank'
+          = #link_to image_tag('icon-gplus.jpg'), nil
         #legend
           Somos un
           %b
@@ -64,10 +64,11 @@
                 - break if counter == 3
           .title.blue
             En twitter
-          #last-tweet
-            = link_to '@ESAdelante', 'http://twitter.com/ESAdelante', target: '_blank'
-            \:
-            = raw @tweet.text
+          - unless @tweet.nil?
+            #last-tweet
+              = link_to '@ESAdelante', 'http://twitter.com/ESAdelante', target: '_blank'
+              \:
+              = raw @tweet.text
         .clear
       #liabilities
         %h2
@@ -100,7 +101,9 @@
                 .clear
         #media
           #join-us
-            Únete y apóyanos
+            Sector profesional
+            %br
+            únete y apóyanos
             = link_to 'Ver cómo', sponsors_url, class: 'btn'
           #gallery
             %h2
@@ -111,15 +114,15 @@
       #bottom
         #social
           Búscanos en:
-          = link_to image_tag('icon-facebook-medium.jpg'), nil
-          = link_to image_tag('icon-twitter-medium.jpg'), nil
-          = link_to image_tag('icon-linkedin-medium.jpg'), nil
-          = link_to image_tag('icon-rss-medium.jpg'), nil
-          = link_to image_tag('icon-gplus-medium.jpg'), nil
-          = link_to image_tag('icon-youtube-medium.jpg'), nil
+          = link_to image_tag('icon-facebook-medium.jpg'), 'https://www.facebook.com/ESAdelante', target: '_blank'
+          = link_to image_tag('icon-twitter-medium.jpg'), 'https://twitter.com/ESAdelante', target: '_blank'
+          = #link_to image_tag('icon-linkedin-medium.jpg'), nil
+          = #link_to image_tag('icon-rss-medium.jpg'), nil
+          = #link_to image_tag('icon-gplus-medium.jpg'), nil
+          = #link_to image_tag('icon-youtube-medium.jpg'), nil
           .clear
         #what-do-you-want
-          ¿Qué país querés?
+          Novedades del movimiento a su E-mail
         .clear
         - unless @events.empty?
           #events
@@ -141,18 +144,21 @@
                 =# link_to 'Seguir leyendo', nil, class: 'read-more'
             .clear
         #bottom-banner
-          = image_tag('bottom-banner-example.jpg')
+          = render partial: 'layouts/mailchimp_form'
+          = #image_tag('bottom-banner-example.jpg')
           -#
             %p
               Comparte en redes sociales la imágenes de #SVAdelante que más te representan
         .clear
       #footer
         #address
-          Av. uno y calle dos, San Salvador
+          Boulevard Los Heroes y 23 Calle
           %br
-          Tel. +503 2223-4789
+          Poniente No. 1245, San Salvador.
+          %br 
+          Tel 2556-3713
           %br
-          = link_to 'Contáctenos', nil
+          = link_to 'movimientociudadanoesadelante@gmail.com', 'mailto:movimientociudadanoesadelante@gmail.com'
         = image_tag 'footer-text.jpg'
         .clear
       #copyright

@@ -48,6 +48,14 @@ Adelante::Application.routes.draw do
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
+  if Rails.env.production?
+    constraints(host: /^(?!www\.)/i) do
+      get '(*any)' => redirect { |params, request|
+        URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+      }
+    end
+  end
+
   # Example resource route within a namespace:
   namespace :admin do
     root to: 'dashboard#index'
