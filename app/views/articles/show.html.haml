@@ -4,10 +4,13 @@
       = link_to @article.name, nil
     %span.date
       = l @article.created_at.to_date, format: :long
+
+    - if @article.photo.present?
+      = image_tag @article.photo.url(:normal), class: 'header'
     
-      - if @article.photo.present?
-        = image_tag @article.photo.url(:normal), class: 'header'
-    
+    .resume
+      = @article.description
+
     .content
       = content_format @article.content, @media
 #right  
